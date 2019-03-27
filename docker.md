@@ -29,6 +29,8 @@
 `docker ps`
 
 #### Start a new terminal in a container
+`docker exec -it builder bash`  
+or  
 `docker exec -i f908f2037a91 /bin/bash`
 
 ## Save container state
