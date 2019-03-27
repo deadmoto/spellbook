@@ -7,3 +7,6 @@
 
 ### Clean workspace
 `bazel clean --expunge`
+
+## Shutdown
+`bazel shutdown`
