@@ -1,5 +1,8 @@
 # Bazel
 
+# Sync
+`bazel sync`
+
 ## Clean
 
 ### Clean outputs
