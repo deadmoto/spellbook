@@ -22,6 +22,9 @@ ls 2>&1
 ### Find and delete files recursively
 `find . -name "*.iml" -delete`
 
+### Find only files
+`find . -type f`
+
 #### Delete file from archive
 `zip -d archive.zip file.txt`
 
