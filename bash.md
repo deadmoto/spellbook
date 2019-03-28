@@ -1,5 +1,7 @@
-# Redirect stderr to stdout
-ls 2>&1
+# bash
+
+## Redirect `stderr` to `stdout`
+`ls 2>&1`
 
 ## grep
 
@@ -24,6 +26,13 @@ ls 2>&1
 
 ### Find only files
 `find . -type f`
+
+## ls
+
+### Follow symlinks
+`ls -lH`
+
+## zip
 
 #### Delete file from archive
 `zip -d archive.zip file.txt`
