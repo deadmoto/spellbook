@@ -19,6 +19,7 @@ or
 `:tabdo <command>`
 
 ## Hotkeys
-> V to select
-> Y to copy
-> P to paste
+> V to select  
+> D to delete  
+> Y to copy  
+> P to paste  
