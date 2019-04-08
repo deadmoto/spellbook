@@ -17,3 +17,8 @@ or
 
 ### Run in new tab
 `:tabdo <command>`
+
+## Hotkeys
+> V to select
+> Y to copy
+> P to paste
