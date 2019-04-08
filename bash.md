@@ -11,6 +11,11 @@
 ### Match line start
 `grep ^output_base:`
 
+## curl
+
+### Request with cookies
+`curl --cookie "foo=bar" http://example.com`
+
 ## cut
 
 ### Cut n-th segment
