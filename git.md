@@ -26,6 +26,9 @@ git config --global url."git@github.sc-corp.net:".insteadOf "https://github.sc-c
 
 ## Local Git config
 
+### Edit local Git config
+`git config -e`
+
 ### Don't fetch tags
 `git config remote.origin.tagopt --no-tags`
 
