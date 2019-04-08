@@ -32,6 +32,11 @@
 ### Find only files
 `find . -type f`
 
+## grep
+
+### Find files containing string
+`grep -r --include=*.proto MultidayFeatureSet .`
+
 ## ls
 
 ### Follow symlinks
