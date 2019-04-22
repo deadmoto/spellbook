@@ -14,6 +14,12 @@
 ### Run container
 `docker run --name ubuntu ubuntu`
 
+### Run container with cached volume (macOS only)
+`docker run -v /opt:/opt:cached ubuntu`
+
+### Run container with specific image version
+`docker run --name jupyter jupyter/tensorflow-notebook:4d19a9839c05`
+
 ## Start container
 `docker start -a jupyter`  
 `docker start -a ubuntu`
@@ -62,7 +68,7 @@ docker-compose build && docker-compose up
 `docker run -it --entrypoint=/bin/bash -v ~/Snapchat/Dev:/home --name ubuntu ubuntu`  
 
 ### Jupyter
-`docker run -p 8888:8888 -v ~/Yandex.Disk.localized/coursera/deep-learning-in-computer-vision:/home/jovyan --name jupyter jupyter/tensorflow-notebook`
+`docker run -p 8888:8888 -v ~:/home/jovyan:cached --name jupyter jupyter/tensorflow-notebook`
 
 `docker run -it -p 127.0.0.1:7007:7007 -p 127.0.0.1:8080:8080 --name coursera-aml-1 zimovnov/coursera-aml-docker`
 
