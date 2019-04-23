@@ -13,3 +13,6 @@ echo -e "instance = [INSTANCE_ID]" >> ~/.cbtrc
 
 ### Create table
 `cbt createtable example`
+
+### Create family
+`cbt createfamily example family`
