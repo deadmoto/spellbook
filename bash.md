@@ -1,4 +1,5 @@
 # bash
+`#!/usr/bin/env bash`
 
 ## Redirect `stderr` to `stdout`
 `ls 2>&1`
@@ -34,6 +35,9 @@
 
 ## grep
 
+### Find lines matching regular expression
+`egrep -o 'https?:.*mp3'`
+
 ### Find files containing string
 `grep -r --include=*.proto MultidayFeatureSet .`
 
@@ -56,12 +60,35 @@
 #### Unpack archive overwriting existing files
 `unzip -o archive.zip`
 
-wget -i downloads.txt
-
-
-egrep -o 'https?:.*mp3' | xargs -L 1 wget
-
 ## sort
 
 ### Reversed order
-sort -k1r
+`sort -k1r`
+
+## wget
+`wget -i downloads.txt`
+
+## Files
+
+### Create temporary directory
+`tmp=$(mktemp -d)`
+
+## Arithmetic expansion
+
+### Evaluate expression
+`total_count=$(($count * $items))`
+
+## if
+
+### Equality check
+```bash
+if [[ errors -ne 0 ]]; then
+  exit 1
+fi
+```
+
+### Equality check
+```bash
+if [[ "$actual" != "$expected" ]];
+fi
+```
