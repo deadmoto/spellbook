@@ -4,6 +4,9 @@
 ## Redirect `stderr` to `stdout`
 `ls 2>&1`
 
+## Exit code
+`echo $?`
+
 ## grep
 
 ### Search recursively
@@ -45,6 +48,11 @@
 
 ### Follow symlinks
 `ls -lH`
+
+## nl
+
+### Print line number
+`nl file.txt`
 
 ## zip
 
