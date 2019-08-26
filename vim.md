@@ -8,6 +8,14 @@
 ### Next tab
 `:tabNext`
 
+## Split view
+
+### Vertical split view
+`vsp <filename>`
+
+### Horizontal split view
+`sp <filename>`
+
 ## Run
 
 ### Run current file
@@ -19,7 +27,10 @@ or
 `:tabdo <command>`
 
 ## Hotkeys
-> V to select  
+> v to select from cursor to EOL
+> V to select line  
 > D to delete  
-> Y to copy  
-> P to paste  
+> Y to copy
+> p to paste before cursor  
+> P to paste after cursor
+
