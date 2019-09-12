@@ -14,7 +14,10 @@
 `:tabnew <filename>`
 
 ### Next tab
-`:tabNext`
+`:tabnext` or `gt`
+
+### Last tab
+`:tabprevious` or `gT`
 
 ## Split view
 
@@ -34,9 +37,17 @@ or
 ### Run in new tab
 `:tabdo <command>`
 
-## Hotkeys
+## Shortcuts
+
+### Navigation
+> 0 - move to beginning of line
+> $ - move to end of line 
+
+### Selection
 > v to select from cursor to EOL
-> V to select line  
+> V to select line
+
+### Editing  
 > D to delete  
 > Y to copy
 > p to paste before cursor  
