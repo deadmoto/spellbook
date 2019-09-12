@@ -8,6 +8,9 @@
 
 `git clean -fdx`
 
+## Unstage file
+`git reset HEAD file`
+
 ## Empty commit
 
 `git commit --allow-empty -m "build"`
