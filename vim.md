@@ -1,5 +1,13 @@
 # vim
 
+## Editor
+
+### Search and replace
+`:%s/foo/bar/g`
+
+### Sort
+`:sort`
+
 ## Tabs
 
 ### New tab
