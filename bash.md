@@ -70,8 +70,14 @@
 
 ## sort
 
+### Sort by first column
+`sort -k1`
+
 ### Reversed order
 `sort -k1r`
+
+## tree
+`tree`
 
 ## wget
 `wget -i downloads.txt`
