@@ -91,6 +91,10 @@ git reset --hard origin/master
 ### bash-git-prompt
 `brew install bash-git-prompt`
 
-git show-ref
+## References
 
-git update-ref -d refs/remotes/origin/py/add_ml_profiler_fewfriendsuggestion
+### Show references
+`git show-ref`
+
+### Delete reference
+`git update-ref -d refs/remotes/origin/foo`
