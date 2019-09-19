@@ -80,7 +80,7 @@ Git LFS prune must be executed manually:
 
 TODO: I haven't quite perfected the technique for doing this for a fresh clone without having to grab the whole repo and trim it down afterwards. Here's some progress though:
 
-git clone --depth=1 --single-branch https://github.sc-corp.net/Snapchat/appengine.git
+`git clone --depth=1 --single-branch https://github.com/foo/bar.git`
 
 ### customize .git/config
 git fetch origin --unshallow
@@ -91,6 +91,10 @@ git reset --hard origin/master
 ### bash-git-prompt
 `brew install bash-git-prompt`
 
-git show-ref
+## References
 
-git update-ref -d refs/remotes/origin/py/add_ml_profiler_fewfriendsuggestion
+### Show references
+`git show-ref`
+
+### Delete reference
+`git update-ref -d refs/remotes/origin/foo`
