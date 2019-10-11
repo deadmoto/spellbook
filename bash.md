@@ -7,6 +7,9 @@
 ## Exit code
 `echo $?`
 
+## Alert
+`echo -e "\a"`
+
 ## grep
 
 ### Search recursively
@@ -106,3 +109,4 @@ fi
 if [[ "$actual" != "$expected" ]];
 fi
 ```
+
