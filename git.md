@@ -24,7 +24,7 @@
 ### Use SSH instead of HTTPS
 
 ```bash
-git config --global url."git@github.sc-corp.net:".insteadOf "https://github.sc-corp.net/"
+git config --global url."git@github.com:".insteadOf "https://github.com"
 ```
 
 ## Local Git config
