@@ -1,5 +1,12 @@
 # Bazel
 
+## Use Bazelisk
+```bash
+brew install bazelisk
+cat latest > .bazelversion
+bazelisk build //...
+```
+
 ## Install exact version
 
 ### Bazel 0.17.2
