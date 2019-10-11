@@ -20,6 +20,9 @@
 
 ## curl
 
+### Follow redirects
+`curl -L http://example.com`
+
 ### Request with cookies
 `curl --cookie "foo=bar" http://example.com`
 
@@ -104,9 +107,37 @@ if [[ errors -ne 0 ]]; then
 fi
 ```
 
-### Equality check
+### Inequality check
 ```bash
 if [[ "$actual" != "$expected" ]];
+fi
+```
+
+### Regex match
+```bash
+if [[ $(gcloud auth list 2>&1) =~ "No credentialed accounts." ]]; then
+    echo "Google Cloud SDK is not authenticated"
+fi
+```
+
+### File exists
+```bash
+if [ ! -f /foo/bar ]; then
+    echo "File not found!"
+fi
+```
+
+### Directory exists
+```bash
+if [ ! -d /foo ]; then
+    echo "Directory not found"
+fi
+```
+
+### Executable exists
+```bash
+if ! [[ -x "$(which brew)" ]]; then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 ```
 
