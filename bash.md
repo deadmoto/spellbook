@@ -18,6 +18,11 @@
 ### Match line start
 `grep ^output_base:`
 
+## sed
+
+### Inplace replace
+`sed -e "s/foo/bar/"`
+
 ## curl
 
 ### Follow redirects
