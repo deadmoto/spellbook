@@ -1,5 +1,6 @@
 # kubectl
 
+## Authentication
 `gcloud container clusters get-credentials userprofile-mesh-dev --zone us-central1-c --project context-pii`
 
 ## Deployment
@@ -19,3 +20,6 @@
 
 ### Get pods
 `kubectl get pods`
+
+## Forward port
+`kubectl port-forward pod 8080:8080`
