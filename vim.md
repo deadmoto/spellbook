@@ -40,16 +40,18 @@ or
 ## Shortcuts
 
 ### Navigation
-> 0 - move to beginning of line
-> $ - move to end of line 
+> gg - move to beginning of file
+> 0  - move to beginning of line
+> $  - move to end of line 
 
 ### Selection
 > v to select from cursor to EOL
 > V to select line
 
 ### Editing  
-> D to delete  
-> Y to copy
-> p to paste before cursor  
-> P to paste after cursor
+>  D - delete
+> dG - delete to EOF   
+>  Y - copy
+>  p - paste before cursor  
+>  P - paste after cursor
 
