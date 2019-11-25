@@ -11,6 +11,9 @@
 ## Unstage file
 `git reset HEAD file`
 
+## Apply patch
+`git apply < diff.patch`
+
 ## Empty commit
 
 `git commit --allow-empty -m "build"`
