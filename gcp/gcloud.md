@@ -11,6 +11,9 @@
 ### Select project
 `gcloud config set project sc-amigo`
 
+### Transfer SSH keys
+`gcloud compute os-login ssh-keys add --key-file ~/.ssh/google_compute_engine.pub`
+
 ### Disable prompts
 `gcloud config set disable_prompts true`  
 or  
