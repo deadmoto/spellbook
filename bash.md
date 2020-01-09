@@ -7,6 +7,9 @@
 ## Exit code
 `echo $?`
 
+## Alias with parameters
+`alias foo='f(){ echo "$@"; unset -f f; };f'`
+
 ## Alert
 `echo -e "\a"`
 
