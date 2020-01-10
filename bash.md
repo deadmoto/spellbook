@@ -21,6 +21,12 @@
 ### Match line start
 `grep ^output_base:`
 
+### Include lines after
+`grep -A 3`
+
+### Include lines before
+`grep -B 3`
+
 ## sed
 
 ### Inplace replace
