@@ -9,14 +9,22 @@
 `git clean -fdx`
 
 ## Unstage file
+
 `git reset HEAD file`
 
 ## Apply patch
+
 `git apply < diff.patch`
 
 ## Empty commit
 
 `git commit --allow-empty -m "build"`
+
+## Commit history
+
+### Changed files
+
+`git diff --name-only HEAD~1 HEAD`
 
 ## Global Git config
 
@@ -33,12 +41,15 @@ git config --global url."git@github.com:".insteadOf "https://github.com"
 ## Local Git config
 
 ### Edit local Git config
+
 `git config -e`
 
 ### Don't fetch tags
+
 `git config remote.origin.tagopt --no-tags`
 
 ### Narrow down remote refs
+
 Edit .git/config as following:
 ```
 [remote "origin"]
@@ -49,6 +60,7 @@ Edit .git/config as following:
 ```
 
 ### Checkout branch without refspec
+
 ```bash
 git fetch origin branch:refs/remotes/origin/branch
 git checkout -b branch origin/branch
@@ -58,12 +70,15 @@ git push --set-upstream origin branch
 ## Git cleanup
 
 ### Delete all tags
+
 `git tag -l | sed "s/\(['\"]\)/\\\\\1/g" | xargs -n1 git tag -d`
 
 ### Delete all remote tracking branches
+
 `git branch -r --no-color | grep -v HEAD | sed "s/\(['\"]\)/\\\\\1/g" | xargs -n1 git branch -rD`
 
 ### Gc and prune
+
 ```
 git gc
 git prune
