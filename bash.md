@@ -7,8 +7,32 @@
 ## Exit code
 `echo $?`
 
+## Left trim
+
+```
+STRING="foo:bar"
+echo "${STRING##*:}"
+```
+
+## Right trim
+```
+STRING="foo:bar"
+echo "${STRING%:bar}"
+```
+
+## Disable bash history
+` echo Run history command`
+
 ## Alias with parameters
 `alias foo='f(){ echo "$@"; unset -f f; };f'`
+
+## For loop with range
+
+`for foo in bar{1..3}; do echo "$foo"; done`
+
+## For loop with seq
+
+`for bar in $(seq -w 1 10); do echo "foo$bar"; done`
 
 ## Alert
 `echo -e "\a"`
@@ -16,16 +40,24 @@
 ## grep
 
 ### Search recursively
+
 `grep -r "ProtoCoder" .`
 
 ### Match line start
+
 `grep ^output_base:`
 
 ### Include lines after
+
 `grep -A 3`
 
 ### Include lines before
+
 `grep -B 3`
+
+### Exclude lines
+
+`grep -v "foo"`
 
 ## sed
 
