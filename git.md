@@ -116,3 +116,14 @@ git reset --hard origin/master
 
 ### Delete reference
 `git update-ref -d refs/remotes/origin/foo`
+
+## Alias
+
+```bash
+git config --global alias.br branch
+git config --global alias.co checkout
+git config --global alias.cm commit
+git config --global alias.rs 'reset HEAD --'
+git config --global alias.sm 'submodule update --init'
+git config --global alias.st status
+```
