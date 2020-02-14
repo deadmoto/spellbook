@@ -122,7 +122,7 @@ git reset --hard origin/master
 ```bash
 git config --global alias.br branch
 git config --global alias.co checkout
-git config --global alias.cm commit
+git config --global alias.cm 'commit -m'
 git config --global alias.rs 'reset HEAD --'
 git config --global alias.sm 'submodule update --init'
 git config --global alias.st status
