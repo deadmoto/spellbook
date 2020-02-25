@@ -4,13 +4,27 @@
 
 `git submodule update --init`
 
-## Reset local copy
+## CHeckout ignoring changes
+
+`git checkout master --force`
+
+## Remove files not in index
 
 `git clean -fdx`
 
 ## Unstage file
 
 `git reset HEAD file`
+
+## Unstage all files
+
+`git reset --hard HEAD`
+
+## Export patch
+
+```
+git diff HEAD --output=diff.patch
+```
 
 ## Apply patch
 
@@ -25,6 +39,10 @@
 ### Changed files
 
 `git diff --name-only HEAD~1 HEAD`
+
+### Merge base
+
+`git merge-base master HEAD`
 
 ## Global Git config
 
