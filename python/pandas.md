@@ -35,9 +35,36 @@ df = pd.concat([df['departure_delay'], percentiles], axis=1)
 ## Explore data
 
 ### Describe dataset
-```python
-df.desribe(include="all")
-```
+
+`df.desribe(include="all")`
+
+### Show dataset head
+
+`df.head()`
+
+### Show random sample
+
+`df.sample(5)`
+
+### Show dataset tail
+
+`df.tail()`
+
+### Show n smallest
+
+`df.nsmallest(10, 'sepal.length')`
+
+### Show n largest
+
+`df.nlargest(10, 'petal.length')`
+
+### Show missing values
+
+`df.isnull()` or `df.isnull().describe()`
+
+### Show value counts
+
+`df['variety'].value_counts(normalize=True,dropna=True)`
 
 ### Show shape
 ```python
