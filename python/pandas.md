@@ -1,8 +1,11 @@
 # Pandas
 
-```python
-import pandas as pd
-```
+`import pandas as pd`
+
+or
+
+`import modin.pandas as pd`
+
 
 ## Load data
 
@@ -65,6 +68,10 @@ df = pd.concat([df['departure_delay'], percentiles], axis=1)
 ### Show value counts
 
 `df['variety'].value_counts(normalize=True,dropna=True)`
+
+### Show histogram
+
+`df['label'].plot.hist()`
 
 ### Show shape
 ```python
