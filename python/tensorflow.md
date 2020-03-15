@@ -19,3 +19,9 @@ model.compile(
     metrics={'tap': ['accuracy'], 'view_time': ['mse']}
 )
 ```
+
+## Layers
+
+### Freeze layer
+
+`layer.training = False`
