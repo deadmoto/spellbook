@@ -4,6 +4,13 @@
 
 `SELECT CASE WHEN 'foo' = 'bar' THEN 1 ELSE 0`
 
+## Percentile
+
+```sql
+#standardSQL
+SELECT PERCENTILE_CONT(x, 0.5) OVER() AS median FROM UNNEST ([0, 1, 2, 3]) AS x;
+```
+
 ## Logistic Regression
 
 ```sql
