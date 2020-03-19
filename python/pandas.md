@@ -6,34 +6,27 @@ or
 
 `import modin.pandas as pd`
 
-
 ## Load data
 
 ### From CSV
-```python
-df = pd.read_csv('iris_training.csv')
-```
+
+`df = pd.read_csv('iris_training.csv')`
 
 ### From HDF
-```python
-df = pd.read_hdf('df_train.h5', key='df')
-```
 
-### From dataframe
-```python
-series = df.toPandas()
-```
-
-or
-
-```python
-percentiles = df['arrival_delay_deciles'].apply(pd.Series)
-```
+`df = pd.read_hdf('df_train.h5', key='df')`
 
 ### Merge series
-```python
-df = pd.concat([df['departure_delay'], percentiles], axis=1)
-```
+
+`df = pd.concat([df['departure_delay'], percentiles], axis=1)`
+
+### Rename column
+
+`df.rename(columns = {'foo': 'bar'}, inplace=True)`
+
+### Drop column
+
+`df.drop(labels=['foo', 'bar'], axis=1, inplace=True)`
 
 ## Explore data
 
@@ -74,29 +67,16 @@ df = pd.concat([df['departure_delay'], percentiles], axis=1)
 `df['label'].plot.hist()`
 
 ### Show shape
-```python
-df.shape
-```
+
+`df.shape`
 
 ### Show columns
-```python
-df.columns
-```
+
+`df.columns`
 
 ### Show first n records
-```python
-df.head()
-```
 
-### Rename columns
-```python
-percentiles.rename(columns = lambda x : '{0}%'.format(x*10), inplace=True)
-```
-
-### Drop columns
-```python
-df.drop(labels=['0%', '100%'], axis=1, inplace=True)
-```
+`df.head()`
 
 #### Percent changes
 `changes = asset_prices.pct_change()`
