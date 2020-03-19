@@ -64,7 +64,7 @@ or
 
 ### Show histogram
 
-`df['label'].plot.hist()`
+`df['label'].plot.hist(bins=10, alpha=0.5)`
 
 ### Show shape
 
