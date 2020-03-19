@@ -264,3 +264,6 @@ done
 
 `printf '%s\n' ${foo[*]}`
 
+### Print array length
+
+`echo $#{foo[@]}`
