@@ -7,7 +7,8 @@
 `docker pull ubuntu`
 
 ### List images
-`docker image ls`
+
+`docker images`
 
 ## Containers
 
@@ -31,8 +32,13 @@
 ## List available containers
 `docker container ls`
 
-## List running containers
-`docker ps`
+### List running/stopped containers
+
+`docker ps -a `
+
+### Start container in background
+
+`docker exec -d foo echo bar`
 
 #### Start a new terminal in a container
 `docker exec -it builder bash`  
@@ -47,8 +53,22 @@ or
 
 ## Build
 
+### Build from Dockerfile
+
+`docker build --tag foo .` or `docker build -t foo .`
+
 ### Build from custom Dockerfile
 `docker build -f builder.dockerfile -t builder .`
+
+## Release
+
+### Tag image
+
+`docker tag foo:latest bar.dkr.ecr.us-west-2.amasonaws.com/foo:latest`
+
+### Push image
+
+`docker push bar.dkr.ecr.us-west-2.amasonaws.com/foo:latest`
 
 ## Docker Compose
 
