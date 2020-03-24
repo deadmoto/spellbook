@@ -58,7 +58,7 @@ or
 `docker build --tag foo .` or `docker build -t foo .`
 
 ### Build from custom Dockerfile
-`docker build -f builder.dockerfile -t builder .`
+`docker build --file Dockerfile.foo --tag foo .` or `docker build -f Dockerfile.foo -t foo .`
 
 ## Release
 
@@ -88,8 +88,9 @@ docker-compose build && docker-compose up
 `docker run -it --entrypoint=/bin/bash -v ~/Snapchat/Dev:/home --name ubuntu ubuntu`  
 
 ### Jupyter
+
 `docker run -p 8888:8888 -v ~:/home/jovyan:cached --name jupyter jupyter/tensorflow-notebook`
-
+or
 `docker run -it -p 127.0.0.1:7007:7007 -p 127.0.0.1:8080:8080 --name coursera-aml-1 zimovnov/coursera-aml-docker`
-
+or
 `docker run -it -p 127.0.0.1:7007:7007 -p 127.0.0.1:8080:8080 --name coursera-aml-snap-1 coursera-aml-snap-1`
