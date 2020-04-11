@@ -30,13 +30,18 @@ or
 
 ## Explore data
 
-### Describe dataset
+### Show whole dataset
 
-`df.desribe(include="all")`
+`df`
+> NOTE: Set option `pd.set_option('max_colwidth', -1)` if content is cropped
 
 ### Show dataset head
 
 `df.head()`
+
+### Describe dataset
+
+`df.desribe(include="all")`
 
 ### Show random sample
 
