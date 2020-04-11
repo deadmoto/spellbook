@@ -35,3 +35,9 @@ a = sns.boxplot(db.DMDMARTLx, db.RIDAGEYR)
 plt.figure(figsize=(12, 4))
 a = sns.violinplot(da.DMDMARTLx, da.RIDAGEYR)
 ```
+
+## Plot parameters
+
+### Plot size
+
+`sns.regplot(x='x', y='y', data=df, aspect=48/16)`
