@@ -2,7 +2,7 @@
 
 ## Checkout submodules
 
-`git submodule update --init`
+`git submodule update --init --recursive`
 
 ## CHeckout ignoring changes
 
@@ -142,6 +142,6 @@ git config --global alias.br branch
 git config --global alias.co checkout
 git config --global alias.cm 'commit -m'
 git config --global alias.rs 'reset HEAD --'
-git config --global alias.sm 'submodule update --init'
+git config --global alias.sm 'submodule update --init --recursive'
 git config --global alias.st status
 ```
