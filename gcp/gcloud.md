@@ -6,9 +6,18 @@
 
 `gcloud init`
 
+### Install components
+```
+gcloud components install docker-credential-gcr
+```
+
 ### Authenticate
 
-`gcloud auth application-default login`
+```
+gcloud auth login
+gcloud auth application-default login
+gcloud auth configure-docker
+```
 
 ### Select project
 
