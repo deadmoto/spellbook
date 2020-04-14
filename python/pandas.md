@@ -83,6 +83,14 @@ or
 
 `df.head()`
 
+## Filter data
+
+### Filter exact matches
+
+`df[df.foo == 'bar']`
+or
+`df[df.foo.isin(['bar'])`
+
 #### Percent changes
 `changes = asset_prices.pct_change()`
 
