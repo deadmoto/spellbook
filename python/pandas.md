@@ -44,10 +44,9 @@ df = pd.DataFrame({
 
 ## Explore data
 
-### Show whole dataset
+### Data types
 
-`df`
-> NOTE: Set option `pd.set_option('max_colwidth', -1)` if content is cropped
+`df.info()`
 
 ### Show dataset head
 
@@ -56,6 +55,10 @@ df = pd.DataFrame({
 ### Describe dataset
 
 `df.desribe(include="all")`
+
+### Quantiles
+
+`df.quantile([0.1, 0.5 ,0.95, 0.9, 0.99])`
 
 ### Show random sample
 
@@ -96,6 +99,11 @@ df = pd.DataFrame({
 ### Show first n records
 
 `df.head()`
+
+### Show whole dataset
+
+`df`
+> NOTE: Set option `pd.set_option('max_colwidth', -1)` if content is cropped
 
 ## Filter data
 
