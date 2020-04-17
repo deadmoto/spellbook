@@ -25,3 +25,7 @@ SELECT foo, bar FROM `project.dataset.train`
 #standardSQL
 SELECT * FROM ML.WEIGHTS(MODEL `project.dataset.model`)
 ```
+
+### Round datetime to hours
+
+`DATETIME_TRUNC(foo, HOUR)`
