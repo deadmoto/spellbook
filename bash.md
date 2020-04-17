@@ -12,6 +12,10 @@
 
 `ls 2>&1`
 
+### Print to stdout and file
+
+`echo foo | tee -a bar.log`
+
 ## Exit code
 
 `echo $?`
