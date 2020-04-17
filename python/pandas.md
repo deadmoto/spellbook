@@ -8,6 +8,15 @@ or
 
 ## Load data
 
+### From constant
+
+```
+df = pd.DataFrame({
+    'foo': [0],
+    'bar': [42],
+})
+```
+
 ### From CSV
 
 `df = pd.read_csv('iris_training.csv')`
