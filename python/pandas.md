@@ -25,9 +25,14 @@ df = pd.DataFrame({
 
 `df = pd.read_hdf('df_train.h5', key='df')`
 
-### Merge series
+### Merge data sets
 
-`df = pd.concat([df['departure_delay'], percentiles], axis=1)`
+### Merge rows
+
+`df = pd.concat([df_train, df_test], axis=0).reset_index(drop=True)`
+
+### Merge columns
+`df = pd.concat([df['foo'], df['bar']], axis=1)`
 
 ### Rename column
 
