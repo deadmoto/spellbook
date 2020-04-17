@@ -2,19 +2,21 @@
 
 `import seaborn as sns`
 
-## Histogram
+## Plots
+
+### Histogram
 
 `sns.distplot(df['foo'], bins=16, label='foo')`
 
-## Scatter plot
+### Scatter plot
 
 `sns.regplot(x="Wingspan", y="Height", data=df)`
 
-## Linear plot
+### Linear plot
 
 `sns.lmplot(x="Wingspan", y="CWDistance", data=df, hue="Gender")`
 
-## Bins
+### Bins
 
 ```
 bins = np.linspace(df.age.min(), df.age.max(), 10)
@@ -22,14 +24,21 @@ g = sns.FacetGrid(df, col="Gender", hue="loan_status", palette="Set1")
 g.map(plt.hist, 'Gender', bins=bins, ec="k")
 ```
 
-## Boxplot
+### Boxplot
 
 ```
 plt.figure(figsize=(12, 4))
 a = sns.boxplot(db.DMDMARTLx, db.RIDAGEYR)
 ```
 
-## Violin plot
+### Heatmap
+
+```python
+corr = df.corr()
+sns.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns)
+```
+
+### Violin plot
 
 ```
 plt.figure(figsize=(12, 4))
