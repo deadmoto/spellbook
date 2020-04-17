@@ -85,7 +85,8 @@ docker-compose build && docker-compose up
 `docker run -it --entrypoint=/bin/bash -v ~/Snapchat/Dev:/home/jenkins/ --name builder builder`
 
 ### Ubuntu
-`docker run -it --entrypoint=/bin/bash -v ~/Snapchat/Dev:/home --name ubuntu ubuntu`  
+
+`docker run -it --entrypoint=/bin/bash -v $HOME:/root:cached --name ubuntu ubuntu`  
 
 ### Jupyter
 
