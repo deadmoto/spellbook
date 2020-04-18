@@ -148,9 +148,6 @@ df['year'] = df['date'].apply(lambda x: x.strftime('%Y'))
 df['month'] = df['date'].apply(lambda x: x.strftime('%m'))
 df['day'] = df['date'].apply(lambda x: x.strftime('%d'))
 
-## filter rows
-`df2 = df[df['year'] == '1999']`
-
 ## filter missing values
 `df.drop(labels=['0%', '100%'], axis=1, inplace=True)`
 
