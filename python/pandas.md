@@ -38,6 +38,10 @@ df = pd.DataFrame({
 
 `df.rename(columns = {'foo': 'bar'}, inplace=True)`
 
+### Replace value
+
+df.foo = df.foo.replace(24, 42)
+
 ### Drop column
 
 `df.drop(labels=['foo', 'bar'], axis=1, inplace=True)`
