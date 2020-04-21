@@ -113,6 +113,8 @@ df = pd.DataFrame({
 or
 `df[df.foo.isin(['bar'])`
 
+## Aggregate
+
 #### Percent changes
 `changes = asset_prices.pct_change()`
 
@@ -127,6 +129,16 @@ or
 short_rolling_spx = pd.rolling_mean(spx_index, 20)
 long_rolling_spx = pd.rolling_mean(spx_index, 100)
 ```
+
+### Bins
+
+`pd.cut(df.foo, bins=2)`
+or
+`pd.cut(df.foo, bins=[0, 24, 42], labels=['foo', 'bar'])`
+
+### Group By
+
+`foo_mean = df.groupby(by='foo').mean()`
 
 #### Access data
 ```python
