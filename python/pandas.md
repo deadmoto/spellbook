@@ -144,6 +144,12 @@ or
 
 `foo_mean = df.groupby(by='foo').mean()`
 
+## Transform
+
+### Apply function
+
+`df['foo'] = df['bar'].apply(lambda x: f(x))`
+
 #### Access data
 ```python
 csv_data[['col1', 'col2']]
