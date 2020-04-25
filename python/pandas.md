@@ -148,7 +148,9 @@ or
 
 ### Apply function
 
-`df['foo'] = df['bar'].apply(lambda x: f(x))`
+`df['foo'] = df['bar'].apply(lambda x: f(x))` for individual values
+or
+`df['foo'] = df['bar'].apply(lambda x: f(x)), axis=1` for complete rows
 
 #### Access data
 ```python
