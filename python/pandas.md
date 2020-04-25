@@ -25,6 +25,16 @@ df = pd.DataFrame({
 
 `df = pd.read_hdf('df_train.h5', key='df')`
 
+## BigQuery
+
+```jupyter
+import pandas as pd
+
+df = pd.io.gbq.read_gbq(f'''
+  SELECT * FROM foo
+''', project_id='bar')
+```
+
 ### Merge data sets
 
 ### Merge rows
