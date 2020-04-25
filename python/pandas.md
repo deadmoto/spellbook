@@ -6,7 +6,7 @@ or
 
 `import modin.pandas as pd`
 
-## Load data
+## Load
 
 ### From constant
 
@@ -25,7 +25,7 @@ df = pd.DataFrame({
 
 `df = pd.read_hdf('df_train.h5', key='df')`
 
-## BigQuery
+### From BigQuery
 
 ```jupyter
 import pandas as pd
@@ -35,26 +35,31 @@ df = pd.io.gbq.read_gbq(f'''
 ''', project_id='bar')
 ```
 
-### Merge data sets
+## Manipulate
 
-### Merge rows
+### Join columns
 
-`df = pd.concat([df_train, df_test], axis=0).reset_index(drop=True)`
-
-### Merge columns
 `df = pd.concat([df['foo'], df['bar']], axis=1)`
+
+### Join rows
+
+`df = pd.concat([df_foo, df_bar], axis=0).reset_index(drop=True)`
+
+### Pivot
+
+`df.pivot_table(index=['foo','bar'])`
 
 ### Rename column
 
 `df.rename(columns = {'foo': 'bar'}, inplace=True)`
 
-### Replace value
-
-df.foo = df.foo.replace(24, 42)
-
 ### Drop column
 
 `df.drop(labels=['foo', 'bar'], axis=1, inplace=True)`
+
+### Replace value
+
+`df.foo = df.foo.replace(24, 42)`
 
 ## Explore data
 
@@ -132,8 +137,9 @@ or
 #### Percent changes
 `changes = asset_prices.pct_change()`
 
-#### Mean
-`mean = asset_returns.mean()`
+### Mean
+
+`mean = df.mean()`
 
 #### Standard deviation
 `std_dev = asset_returns.std()`
@@ -162,7 +168,8 @@ or
 or
 `df['foo'] = df['bar'].apply(lambda x: f(x)), axis=1` for complete rows
 
-#### Access data
+## Access data
+
 ```python
 csv_data[['col1', 'col2']]
 csv_data.iloc[0:1]
@@ -174,30 +181,30 @@ csv_data.iloc[0:1]
 # Shuffle data
 csv_data = csv_data.sample(frac=1).reset_index(drop=True)
 
-# convert string to datetime:
+### convert string to datetime:
 df['date'] = pd.to_datetime(df['string'], format='%d.%m.%Y')
 
-# convert datetime to string
+### convert datetime to string
 df['year'] = df['date'].apply(lambda x: x.strftime('%Y'))
 df['month'] = df['date'].apply(lambda x: x.strftime('%m'))
 df['day'] = df['date'].apply(lambda x: x.strftime('%d'))
 
-## filter missing values
+### filter missing values
 `df.drop(labels=['0%', '100%'], axis=1, inplace=True)`
 
-# collect distinct values
+### collect distinct values
 df['column'].unique()
 
-# group by + sum
+### group by + sum
 grouped = df[['item_id', 'item_count']].groupby('item_id').sum().dropna()
 
-# sort by column
+### sort by column
 sorted = df.sort_values('column', ascending=False)
 
-# multiply columns
+### multiply columns
 df['total'] = df['item_price'] * df['item_count']
 
-## Indices and values
+### Indices and values
 total_num_items_sold = sales.values
 days = sales.index.values
 
