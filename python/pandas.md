@@ -27,7 +27,7 @@ df = pd.DataFrame({
 
 ### From BigQuery
 
-```jupyter
+```python
 import pandas as pd
 
 df = pd.io.gbq.read_gbq(f'''
@@ -134,17 +134,20 @@ or
 
 ## Aggregate
 
-#### Percent changes
+### Percent changes
+
 `changes = asset_prices.pct_change()`
 
 ### Mean
 
 `mean = df.mean()`
 
-#### Standard deviation
+### Standard deviation
+
 `std_dev = asset_returns.std()`
 
-#### Rolling average
+### Rolling average
+
 ```python
 short_rolling_spx = pd.rolling_mean(spx_index, 20)
 long_rolling_spx = pd.rolling_mean(spx_index, 100)
@@ -159,6 +162,9 @@ or
 ### Group By
 
 `foo_mean = df.groupby(by='foo').mean()`
+or
+`foo_mean = df.groupby(['foo'], as_index=True).agg({'bar': 'mean'})`
+
 
 ## Transform
 
