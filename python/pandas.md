@@ -177,10 +177,15 @@ or
 
 ## Access data
 
-```python
-csv_data[['col1', 'col2']]
-csv_data.iloc[0:1]
-```
+### Index
+
+`df.iloc[cols]`
+or
+`df.iloc[rows, cols]`
+
+### Values
+
+`df.loc[:, ['foo', 'bar']]`
 
 #### Export data to Python dictionary
 `records = csv.to_dict('records')`
