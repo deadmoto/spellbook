@@ -32,6 +32,20 @@ df = pd.io.gbq.read_gbq(f'''
 ''', project_id='bar')
 ```
 
+### Copy
+
+`df2 = df.copy(deep=True)`
+
+## Save
+
+### CSV
+
+`df.to_csv('foo.csv', index=False)`
+
+### Excel
+
+`df.to_excel('foo.xls')`
+
 ## Manipulate
 
 ### Index
@@ -133,6 +147,10 @@ df = pd.io.gbq.read_gbq(f'''
 or
 `df[df.foo.isin(['bar'])`
 
+### Distinct
+
+`values = df['foo'].unique()`
+
 ## Aggregate
 
 ### Percent changes
@@ -203,9 +221,6 @@ df['day'] = df['date'].apply(lambda x: x.strftime('%d'))
 
 ### filter missing values
 `df.drop(labels=['0%', '100%'], axis=1, inplace=True)`
-
-### collect distinct values
-df['column'].unique()
 
 ### group by + sum
 grouped = df[['item_id', 'item_count']].groupby('item_id').sum().dropna()
