@@ -10,12 +10,9 @@ or
 
 ### From constant
 
-```
-df = pd.DataFrame({
-    'foo': [0],
-    'bar': [42],
-})
-```
+`df = pd.DataFrame({'foo': [0], 'bar': [42]})`
+or
+`df = pd.DataFrame([[0, 42]], columns=['foo', 'bar'])`
 
 ### From CSV
 
@@ -36,6 +33,10 @@ df = pd.io.gbq.read_gbq(f'''
 ```
 
 ## Manipulate
+
+### Index
+
+`df = df.set_index('foo')`
 
 ### Join columns
 
