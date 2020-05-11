@@ -10,7 +10,17 @@
 
 `foo = [0] * bar`
 
+### Enumerate
+
+`for i, x in enumerate(foo):`
+
 ### Expand
+
+`foo, bar = ['foo', 'bar'].squeeze()`
+
+### Zip
+
+`foobar = list(zip(foo, bar))`
 
 `foo, bar = ['foo', 'bar'].squeeze()`
 
