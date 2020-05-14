@@ -246,5 +246,12 @@ plt.show()
 df.select('Attrition').toPandas().Attrition.value_counts().plot.bar()
 
 ## Plot options
+
+### Maximum rows
+
+`pd.set_option('display.max_rows', 42)`
+
+### Maximum columns
+
 pd.set_option('display.max_columns', 35)
 
