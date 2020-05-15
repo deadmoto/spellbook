@@ -3,12 +3,34 @@
 ## Images
 
 ### Pull image
-`docker pull jupyter/tensorflow-notebook`  
+
+`docker pull jupyter/tensorflow-notebook`
+or
 `docker pull ubuntu`
 
 ### List images
 
 `docker images`
+
+## Build
+
+### Build from Dockerfile
+
+`docker build --tag foo .` or `docker build -t foo .`
+
+### Build from custom Dockerfile
+
+`docker build --file Dockerfile.foo --tag foo .` or `docker build -f Dockerfile.foo -t foo .`
+
+## Release
+
+### Tag image
+
+`docker tag foo:latest bar.dkr.ecr.us-west-2.amasonaws.com/foo:latest`
+
+### Push image
+
+`docker push bar.dkr.ecr.us-west-2.amasonaws.com/foo:latest`
 
 ## Containers
 
@@ -21,54 +43,42 @@
 ### Run container with specific image version
 `docker run --name jupyter jupyter/tensorflow-notebook:4d19a9839c05`
 
-## Start container
-`docker start -a jupyter`  
+### Start container
+
+`docker start -a jupyter`
+or
 `docker start -a ubuntu`
 
-## Stop container
-`docker stop jupyter`  
+### Start container in background
+
+`docker exec -d foo echo bar`
+
+### Stop container
+
+`docker stop jupyter`
+or
 `docker stop ubuntu`
 
-## List available containers
+### List available containers
 `docker container ls`
 
 ### List running/stopped containers
 
 `docker ps -a `
 
-### Start container in background
+### Start a new terminal in a container
 
-`docker exec -d foo echo bar`
-
-#### Start a new terminal in a container
-`docker exec -it builder bash`  
-or  
+`docker exec -it builder bash`
+or
 `docker exec -i f908f2037a91 /bin/bash`
 
-## Save container state
+### Save container state
+
 `docker commit jupyter jupyter-v1`
 
-## Remove unused containers
+### Remove unused containers
+
 `docker container prune`
-
-## Build
-
-### Build from Dockerfile
-
-`docker build --tag foo .` or `docker build -t foo .`
-
-### Build from custom Dockerfile
-`docker build --file Dockerfile.foo --tag foo .` or `docker build -f Dockerfile.foo -t foo .`
-
-## Release
-
-### Tag image
-
-`docker tag foo:latest bar.dkr.ecr.us-west-2.amasonaws.com/foo:latest`
-
-### Push image
-
-`docker push bar.dkr.ecr.us-west-2.amasonaws.com/foo:latest`
 
 ## Docker Compose
 
