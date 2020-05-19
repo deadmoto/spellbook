@@ -242,10 +242,11 @@ plt.xlabel('Day')
 plt.title("Daily revenue for shop_id = 25")
 plt.show()
 
-## Plot values
-df.select('Attrition').toPandas().Attrition.value_counts().plot.bar()
+### Plot values
 
-## Plot options
+`df['foo'].value_counts().plot.bar()`
+
+## Rendering options
 
 ### Maximum rows
 
@@ -254,4 +255,7 @@ df.select('Attrition').toPandas().Attrition.value_counts().plot.bar()
 ### Maximum columns
 
 pd.set_option('display.max_columns', 35)
+    
+### Align text
 
+`df.style.set_properties(**{'text-align': 'left'})`
