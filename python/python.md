@@ -4,6 +4,12 @@
 
 `pip install tensorflow==1.1`
 
+## Strings
+
+### Interpolation
+
+`msg = f'Hello, {username}!'`
+
 ## Arrays
 
 ### Create fixed size array
