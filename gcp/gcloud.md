@@ -32,3 +32,13 @@ gcloud auth configure-docker
 `gcloud config set disable_prompts true`  
 or  
 `export CLOUDSDK_CORE_DISABLE_PROMPTS=0`
+
+## Containers
+
+### List images
+
+`gcloud container images list --repository=gcr.io/foo --filter="bar"`
+
+### List tags
+
+`gcloud container images list-tags gcr.io/foo/bar`
