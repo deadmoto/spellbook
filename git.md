@@ -130,9 +130,15 @@ git reset --hard origin/master
 ## References
 
 ### Show references
+
 `git show-ref`
 
+### Short reference
+
+`git rev-parse --short HEAD`
+
 ### Delete reference
+
 `git update-ref -d refs/remotes/origin/foo`
 
 ## Alias
