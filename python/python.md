@@ -4,6 +4,12 @@
 
 `pip install tensorflow==1.1`
 
+## Numbers
+
+### Power
+
+`y = x**2`
+
 ## Strings
 
 ### Interpolation
