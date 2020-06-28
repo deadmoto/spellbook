@@ -16,9 +16,13 @@
 
 `%%time`
 
-## Show variables
+## Show variable
 
 `%who str`
+
+## Show all variables
+
+`%whos`
 
 ## Show variable info
 
