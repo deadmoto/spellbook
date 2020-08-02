@@ -33,6 +33,29 @@ gcloud auth configure-docker
 or  
 `export CLOUDSDK_CORE_DISABLE_PROMPTS=0`
 
+## Service accounts
+
+### Create
+
+```bash
+gcloud iam service-accounts create jenkins-master \
+    --description="Jenkins master" \
+    --display-name="Jenkins master"
+```
+
+### Create key
+
+```bash
+gcloud iam service-accounts keys create $GOOGLE_APPLICATION_CREDENTIALS \
+  --iam-account foo@bar.iam.gserviceaccount.com
+```
+
+### Authenticate
+
+```bash
+gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+```
+
 ## Containers
 
 ### List images
