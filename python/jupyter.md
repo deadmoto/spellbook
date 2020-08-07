@@ -1,53 +1,77 @@
 # Jupyter
 
-## Write script
+## Magic commands
+
+### Show all magic commands
+
+`%lsmagic`
+
+### Write script
 
 `%%writefile foo.py`
 
-## Display script
+### Display script
 
 `%pycat foo.py`
 
-## Run script
+### Run script
 
 `%run foo.py`
 
-## Benchmark script
+### Benchmark script
 
 `%%time`
 
-## Show variable
+### Show variable
 
 `%who str`
 
-## Show all variables
+### Show all variables
 
 `%whos`
 
-## Show variable info
+### Show variable info
 
 `%pinfo foo`
 
-## Store variable
+### Store variable
 
 `%store foo`
 
-## Load variable
+### Load variable
 
 `%store -r foo`
 
-## Render HTML
+### Render HTML
 
 `%%html`
 
-## Run JavaScript
+### Run JavaScript
 
 `%%js`
 
-## Set environment variable
+### Set environment variable
 
 `%env foo bar`
 
-## Show all magic commands
+## Retina resolution
 
-`%lsmagic`
+`%config InlineBackend.figure_format ='retina'`
+
+## Files
+
+### Link file
+
+```jupyterpython
+from IPython.display import FileLink
+
+display(FileLink('foo.csv'))
+```
+
+### List directory
+
+```jupyterpython
+from IPython.display import FileLinks
+
+FileLinks('.')
+```
