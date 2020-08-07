@@ -1,28 +1,59 @@
 # Numpy
+
 `import numpy as np`
 
 ## Arrays
 
-### Array creation
+### Create
 
 #### Array of constants
+
 `np.array([0, 1, 2])`
 
 #### Copy of array
-`copy = np.copy(array)`
+
+`foo = np.copy(bar)`
 
 #### Array of zeros
+
 `np.zeros(10)`
 
 #### Array or matrix of ones
-`np.ones(10)`  
-`np.ones((3, 3))`
+
+`np.ones(10)` or `np.ones((3, 3))`
 
 #### Range of values
-`population = np.arange(1, 100)`
+
+`np.arange(1, 100)`
 
 #### Linear space
-`population = np.linspace(start=0, stop=41, num=42)`
+
+`np.linspace(start=0, stop=41, num=42)`
 
 #### Random sample
-`sample = np.random.choice(population, 10)`
+
+`np.random.choice(foo, 10)`
+
+### Transform
+
+#### Add new axis
+
+`array3d = array2d[:,:,newaxis]`
+
+#### Reshape array
+
+`array2d = array1d.reshape((-1, 2))`
+
+#### Flip array
+
+`np.flip(foo, axis=1)`
+
+### Modify
+
+#### Conditional update
+
+`x[x < 42] = 0`
+
+#### Concatenate
+
+`np.concatenate((foo, bar), axis=0)`
