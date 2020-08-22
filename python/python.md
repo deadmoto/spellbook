@@ -26,6 +26,10 @@
 
 `for i, x in enumerate(foo):`
 
+### Remove element
+
+`foo = bar.pop()`
+
 ### Expand
 
 `foo, bar = ['foo', 'bar'].squeeze()`
