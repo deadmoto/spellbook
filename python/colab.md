@@ -10,7 +10,7 @@ print('Authenticated')
 
 ## Run BigQuery query
 
-```
+```jupyterpython
 %%bigquery --project foo df
 SELECT * from UNNEST(['bar']) as bar
 ```
