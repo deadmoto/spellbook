@@ -6,23 +6,28 @@
 
 ## Instances
 
-### Create instance
+### List
+
+`cbt -project foo listinstances`
+
+### Create
 
 ```bash
-gcloud bigtable instances create friends-engagement-test \
-    --project=devsnapchat \
-    --cluster=friends-engagement-test \
+gcloud bigtable instances create test-instance \
+    --project=test-project \
+    --cluster=test-cluster \
     --cluster-zone=us-central1-c \
-    --display-name=friends-engagement-test \
+    --display-name=test \
     --cluster-storage-type=hdd \
     --instance-type=DEVELOPMENT
 ```
 
 ### Delete instance
 
-`cbt deleteinstance friends-engagement-test`
+`cbt deleteinstance test-instance`
 
 ## Config
+
 ```bash
 echo -e "project = [PROJECT_ID]" > ~/.cbtrc
 echo -e "instance = [INSTANCE_ID]" >> ~/.cbtrc
@@ -31,16 +36,21 @@ echo -e "instance = [INSTANCE_ID]" >> ~/.cbtrc
 ## Tables
 
 ### List tables
-`cbt ls`
+
+`cbt -project foo -instance bar ls`
 
 ### Create table
-`cbt -project dev -instance test createtable example`
 
-### Create family
-`cbt -project dev -instance test createfamily example family`
+`cbt -project foo -instance bar createtable my_table`
 
 ### Delete table
-`cbt -project dev -instance test deletetable example`
+
+`cbt -project foo -instance bar deletetable my_table`
+
+### Create family
+
+`cbt -project foo -instance bar createfamily my_table my_family`
 
 ### Delete family
-`cbt -project dev -instance test deletefamily example family`
+
+`cbt -project foo -instance bar deletefamily my_table my_family`
