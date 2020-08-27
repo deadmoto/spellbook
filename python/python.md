@@ -58,6 +58,8 @@
 
 `foo = my_dict.get('bar', None)`
 or
+`foo = my_dict.setdefault('bar', list())`
+or
 ```python
 from collections import defaultdict
 
@@ -99,3 +101,9 @@ with open('some.csv', 'wb') as f:
 
 ### Newest file in directory
 `newest_file = max(files, key=os.path.getctime)`
+
+## Pickle
+
+### Load object
+
+`foo = pickle.load(open('path/to/foo'))`
