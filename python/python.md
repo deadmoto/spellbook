@@ -16,7 +16,7 @@
 
 `msg = f'Hello, {username}!'`
 
-## Arrays
+## Array
 
 ### Create fixed size array
 
@@ -38,8 +38,64 @@
 
 `foobar = list(zip(foo, bar))`
 
-`foo, bar = ['foo', 'bar'].squeeze()`
+## Set
 
-### Zip
+### New set
 
-`list(zip(foo, bar))`
+`foo = set(['bar'])`
+
+### Add element
+
+`foo.add('bar')`
+
+### Membership
+
+`'foo' in bar`
+
+## Dictionary
+
+### Default value
+
+`foo = my_dict.get('bar', None)`
+or
+```python
+from collections import defaultdict
+
+my_dict = defaultdict(list)
+```
+
+### Merge
+
+```python
+dict1 = { 'foo': 1 }
+dict2 = { 'bar': 42 }
+merged = { **dict1, **dict2 }
+```
+
+### Initialize dictionary with a function
+`images = {x: mpimg.imread(dir_name + '/' + x) for x in files}`
+
+>>> keys = ['a', 'b', 'c']
+>>> values = [1, 2, 3]
+>>> dictionary = dict(zip(keys, values))
+
+```
+import csv
+with open('some.csv', 'wb') as f:
+    writer = csv.writer(f)
+    writer.writerows(someiterable)
+```
+
+## File system
+
+### Current working directory
+`os.getcwd()`
+
+### Create path from directory name and file name
+`path = os.path.join(dir_name, file_name)`
+
+### List files in directory
+`files = os.listdir(dir_name)`
+
+### Newest file in directory
+`newest_file = max(files, key=os.path.getctime)`
