@@ -16,6 +16,16 @@
 
 `msg = f'Hello, {username}!'`
 
+### Remove non-ASCII characters
+
+```python
+import unicodedata
+
+sanitized = unicodedata.normalize('NFKD', nonsanitized)\
+                       .encode('ascii', 'ignore')\
+                       .decode('utf-8', 'ignore')
+```
+
 ## Array
 
 ### Create fixed size array
@@ -107,3 +117,7 @@ with open('some.csv', 'wb') as f:
 ### Load object
 
 `foo = pickle.load(open('path/to/foo'))`
+
+## HTTP server
+
+`python -m SimpleHTTPServer 8080`
