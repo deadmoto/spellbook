@@ -38,3 +38,7 @@ brew pin bazel
 ### Graph
 
 `bazel query 'deps(//foo:bar)' --nohost_deps --noimplicit_deps --output=graph | dot -Tpng > graph.png`
+
+### Path
+
+`bazel query "allpaths(//:foo, //:bar)"`
