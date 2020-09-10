@@ -48,6 +48,10 @@
 
 `np.flip(foo, axis=1)`
 
+#### Locate non-zero elements
+
+`np.argwhere(array)`
+
 ### Modify
 
 #### Conditional update
