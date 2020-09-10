@@ -15,13 +15,12 @@
 
 `kubectl describe pod userprofile-indexer-7cbddd9fd8-9xfpb`
 
-### Get cronjob
-`kubectl get cronjob`
-
 ### Get nodes
+
 `kubectl get nodes`
 
 ### Get pods
+
 `kubectl get pods`
 
 ### Get pods for namespace
@@ -29,3 +28,13 @@
 
 ## Forward port
 `kubectl port-forward pod 8080:8080`
+
+## Cronjob
+
+### List cronjobs
+
+`kubectl get cronjobs -A`
+
+### Patch cronjob
+
+`kubectl patch cronjobs <job-name> -p '{ "spec": { "suspend": true } }'`
