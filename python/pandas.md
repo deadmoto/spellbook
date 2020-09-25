@@ -16,7 +16,7 @@ or
 
 ### From CSV
 
-`df = pd.read_csv('iris_training.csv')`
+`df = pd.read_csv('data.csv', names=['foo', 'bar'])`
 
 ### From HDF
 
@@ -40,7 +40,7 @@ df = pd.io.gbq.read_gbq(f'''
 
 ### CSV
 
-`df.to_csv('foo.csv', index=False)`
+`df.to_csv('foo.csv', header=True, index=False)`
 
 ### Excel
 
@@ -75,6 +75,14 @@ df = pd.io.gbq.read_gbq(f'''
 ### Replace value
 
 `df.foo = df.foo.replace(24, 42)`
+
+### Sort by column
+
+`df.sort_values('foo', ascending=True)`
+
+### Shuffle data
+
+`df = df.sample(frac=1).reset_index(drop=True)`
 
 ## Explore data
 
@@ -184,6 +192,9 @@ or
 or
 `foo_mean = df.groupby(['foo'], as_index=True).agg({'bar': 'mean'})`
 
+### Value count
+
+`values = df['foo'].value_counts()`
 
 ## Transform
 
@@ -205,11 +216,9 @@ or
 
 `df.loc[:, ['foo', 'bar']]`
 
-#### Export data to Python dictionary
-`records = csv.to_dict('records')`
+### Dictionary
 
-# Shuffle data
-csv_data = csv_data.sample(frac=1).reset_index(drop=True)
+`records = df.to_dict(orient='records')`
 
 ### convert string to datetime:
 df['date'] = pd.to_datetime(df['string'], format='%d.%m.%Y')
@@ -254,7 +263,7 @@ plt.show()
 
 ### Maximum columns
 
-pd.set_option('display.max_columns', 35)
+`pd.set_option('display.max_columns', 35)`
     
 ### Align text
 
