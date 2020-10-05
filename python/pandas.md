@@ -216,9 +216,16 @@ or
 
 `df.loc[:, ['foo', 'bar']]`
 
-### Dictionary
+### Dictionaries
 
 `records = df.to_dict(orient='records')`
+
+### Iterate
+
+```python
+for idx, row in df.iterrows():
+    print(idx, row)
+```    
 
 ### convert string to datetime:
 df['date'] = pd.to_datetime(df['string'], format='%d.%m.%Y')
