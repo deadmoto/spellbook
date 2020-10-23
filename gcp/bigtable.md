@@ -14,8 +14,8 @@
 
 ```bash
 gcloud bigtable instances create test-instance \
-    --project=test-project \
-    --cluster=test-cluster \
+    --project=foo \
+    --cluster=bar \
     --cluster-zone=us-central1-c \
     --display-name=test \
     --cluster-storage-type=hdd \
@@ -50,6 +50,10 @@ echo -e "instance = [INSTANCE_ID]" >> ~/.cbtrc
 ### Create family
 
 `cbt -project foo -instance bar createfamily my_table my_family`
+
+### Set GC policy
+
+`cbt -project foo -instance bar setgcpolicy my_table my_family maxversions=100`
 
 ### Delete family
 
