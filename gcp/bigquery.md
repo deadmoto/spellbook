@@ -1,5 +1,17 @@
 # BigQuery
 
+## List datasets
+
+`bq --project_id foo ls`
+
+## List tables
+
+`bq --project_id foo ls bar`
+
+## Delete tables
+
+`bq --project_id foo rm -f -t bar.table`
+
 ## If
 
 `SELECT CASE WHEN 'foo' = 'bar' THEN 1 ELSE 0`
