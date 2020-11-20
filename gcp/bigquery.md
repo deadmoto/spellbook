@@ -14,7 +14,7 @@
 
 ## If
 
-`SELECT CASE WHEN 'foo' = 'bar' THEN 1 ELSE 0`
+`SELECT CASE WHEN 'foo' = 'bar' THEN 1 ELSE 0 END`
 
 ## Percentile
 
@@ -37,6 +37,12 @@ SELECT foo, bar FROM `project.dataset.train`
 #standardSQL
 SELECT * FROM ML.WEIGHTS(MODEL `project.dataset.model`)
 ```
+
+## Date and time
+
+### Timestamp to date and time
+
+`EXTRACT(DATETIME FROM ts AT TIME ZONE America/Los_Angeles)`
 
 ### Round datetime to hours
 
