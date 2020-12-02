@@ -76,6 +76,26 @@ from collections import defaultdict
 my_dict = defaultdict(list)
 ```
 
+### Iterate keys
+
+`for k in foo.keys():`
+
+### Iterate values
+
+`for v in foo.values()`
+
+### Iterate items
+
+`for k, v in foo.items()`
+
+### Update values
+
+`foo.update(bar)`
+
+### Delete value
+
+`foo.pop('bar')` or `foo.del('bar')`
+
 ### Merge
 
 ```python
@@ -85,6 +105,7 @@ merged = { **dict1, **dict2 }
 ```
 
 ### Initialize dictionary with a function
+
 `images = {x: mpimg.imread(dir_name + '/' + x) for x in files}`
 
 >>> keys = ['a', 'b', 'c']
@@ -101,15 +122,19 @@ with open('some.csv', 'wb') as f:
 ## File system
 
 ### Current working directory
+
 `os.getcwd()`
 
 ### Create path from directory name and file name
+
 `path = os.path.join(dir_name, file_name)`
 
 ### List files in directory
+
 `files = os.listdir(dir_name)`
 
 ### Newest file in directory
+
 `newest_file = max(files, key=os.path.getctime)`
 
 ## Pickle
