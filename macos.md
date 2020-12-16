@@ -4,6 +4,10 @@
 
 `pmset noidle`
 
+## Watch Spotlight indexing
+
+`sudo fs_usage -w -f filesys mds`
+
 ## Homebrew
 
 ### Search
