@@ -1,8 +1,17 @@
 # Python
 
-## PIP
+## pip
 
+### Install package
 `pip install tensorflow==1.1`
+
+### pip config locations
+
+`pip3 config list -v`
+
+### add pip repository
+
+`pip config --user set global.extra-index-url http://example.com/`
 
 ## Numbers
 
