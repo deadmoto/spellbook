@@ -1,41 +1,48 @@
 # BigQuery
 
-## List datasets
+## bq
+
+### List datasets
 
 `bq --project_id foo ls`
 
-## List tables
+### List tables
 
 `bq --project_id foo ls bar`
 
-## Delete tables
+### Delete tables
 
 `bq --project_id foo rm -f -t bar.table`
 
-## If
+## SELECT
 
-`SELECT CASE WHEN 'foo' = 'bar' THEN 1 ELSE 0 END`
+### WITH
 
-## Percentile
-
-```sql
-#standardSQL
-SELECT PERCENTILE_CONT(x, 0.5) OVER() AS median FROM UNNEST ([0, 1, 2, 3]) AS x;
+```bigquery
+WITH foobar AS (
+    SELECT 'foo' AS foo, 'bar' AS bar
+)
+SELECT foo, bar
+FROM foobar
 ```
 
-## Logistic Regression
-
-```sql
-CREATE OR REPLACE MODEL `project.dataset.model`
-OPTIONS(model_type='LOGISTIC_REG', auto_class_weights=TRUE, input_label_cols=['label']) AS
-SELECT foo, bar FROM `project.dataset.train`
+### UNNEST
+```bigquery
+SELECT *
+FROM foo
+CROSS JOIN UNNEST(bar)
 ```
 
-## Model Weights
+### CASE
 
-```sql
+`SELECT (CASE WHEN 'foo' = 'bar' THEN 1 ELSE 0 END) as foo_bar`
+
+### PERCENTILE_CONT
+
+```bigquery
 #standardSQL
-SELECT * FROM ML.WEIGHTS(MODEL `project.dataset.model`)
+SELECT PERCENTILE_CONT(x, 0.5) OVER() AS median
+FROM UNNEST ([0, 1, 2, 3]) AS x
 ```
 
 ## Date and time
@@ -47,3 +54,20 @@ SELECT * FROM ML.WEIGHTS(MODEL `project.dataset.model`)
 ### Round datetime to hours
 
 `DATETIME_TRUNC(foo, HOUR)`
+
+## ML
+
+### Logistic Regression
+
+```bigquery
+CREATE OR REPLACE MODEL `project.dataset.model`
+OPTIONS(model_type='LOGISTIC_REG', auto_class_weights=TRUE, input_label_cols=['label']) AS
+SELECT foo, bar FROM `project.dataset.train`
+```
+
+### Model Weights
+
+```bigquery
+#standardSQL
+SELECT * FROM ML.WEIGHTS(MODEL `project.dataset.model`)
+```
