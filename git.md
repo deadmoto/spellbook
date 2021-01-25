@@ -1,12 +1,18 @@
 # Git
 
-## Checkout submodules
+## Checkout
+
+### Checkout ignoring local changes
+
+`git checkout master --force`
+
+### Checkout submodules
 
 `git submodule update --init --recursive`
 
-## CHeckout ignoring changes
+### Recursively update submodules
 
-`git checkout master --force`
+`git config --global submodule.recurse true`
 
 ## Remove files not in index
 
@@ -151,3 +157,5 @@ git config --global alias.rs 'reset HEAD --'
 git config --global alias.sm 'submodule update --init --recursive'
 git config --global alias.st status
 ```
+
+git config --global alias.pullall '!f(){ git pull "$@" && git submodule update --init --recursive; }; f'
