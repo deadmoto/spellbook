@@ -1,4 +1,39 @@
-# Plugins
-* Rainbow Brackets
-* Key Promoter
+# IDEA
 
+## Settings
+
+### VM properties
+
+```properties
+# Memory settings
+-Xms512m
+-Xmx4g
+-XX:ReservedCodeCacheSize=512m
+```
+
+### Custom properties
+
+```properties
+# custom IntelliJ IDEA properties
+idea.max.intellisense.filesize=10000
+idea.config.path=~/.config/idea-2020.3/config
+idea.system.path=~/.config/idea-2020.3/system
+idea.plugins.path=~/.config/idea-2020.3/plugins
+idea.log.path=~/.config/idea-2020.3/logs
+```
+
+### Plugins
+
+* Rainbow Brackets
+* Key Promoter X
+* GitLink
+
+## Structural search
+
+### Instance method
+
+```xml
+<searchConfiguration name="InstanceMethod" text="$MyClass$.methodName()" type="JAVA">
+<constraint name="MyClass" nameOfExprType="MyClass" />
+</searchConfiguration>
+```
