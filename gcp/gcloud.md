@@ -85,8 +85,11 @@ gcloud iam service-accounts keys create $GOOGLE_APPLICATION_CREDENTIALS \
 
 ```shell
 gcloud compute instances create foo \
+    --project bar \
+    --zone us-central1-a \
+    --machine-type f1-micro \
     --image-family debian-10 \
-    --image-project bar
+    --image-project debian-cloud
 ```
 
 ## Kubernetes
