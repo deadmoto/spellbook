@@ -18,6 +18,10 @@ gcloud auth application-default login
 gcloud auth configure-docker
 ```
 
+### Show config
+
+`gcloud config list`
+
 ### Select project
 
 `gcloud config set project foo`
