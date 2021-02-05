@@ -57,6 +57,20 @@ gcloud iam service-accounts keys create $GOOGLE_APPLICATION_CREDENTIALS \
 
 `gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS`
 
+## Compute Engine
+
+### Supported images
+
+`gcloud compute images list`
+
+### Create VM
+
+```shell
+gcloud compute instances create foo \
+    --image-family debian-10 \
+    --image-project bar
+```
+
 ## Containers
 
 ### List images
