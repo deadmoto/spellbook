@@ -105,3 +105,15 @@ or
 `docker run -it -p 127.0.0.1:7007:7007 -p 127.0.0.1:8080:8080 --name coursera-aml-1 zimovnov/coursera-aml-docker`
 or
 `docker run -it -p 127.0.0.1:7007:7007 -p 127.0.0.1:8080:8080 --name coursera-aml-snap-1 coursera-aml-snap-1`
+
+## Dockerfile
+
+### apt-get
+
+```shell script
+RUN apt-get update \
+ && apt-get install -y \
+            apt-get \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
+```
