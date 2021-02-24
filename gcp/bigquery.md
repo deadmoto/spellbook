@@ -14,6 +14,15 @@
 
 `bq --project_id foo rm -f -t bar.table`
 
+## Schema
+
+### List tables
+
+```bigquery
+SELECT *
+FROM `foo.bar.INFORMATION_SCHEMA.TABLES`;
+```
+
 ## SELECT
 
 ### WITH
@@ -36,6 +45,10 @@ CROSS JOIN UNNEST(bar)
 ### CASE
 
 `SELECT (CASE WHEN 'foo' = 'bar' THEN 1 ELSE 0 END) as foo_bar`
+
+### SPLIT
+
+`SELECT SPLIT(foo, '#')[ORDINAL(2)] as foo_right`
 
 ### PERCENTILE_CONT
 
