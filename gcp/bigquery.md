@@ -59,6 +59,14 @@ SELECT PERCENTILE_CONT(x, 0.5) OVER() AS median
 FROM UNNEST ([0, 1, 2, 3]) AS x
 ```
 
+## CREATE
+
+```bigquery
+CREATE OR REPLACE TABLE `foo.bar.new` AS
+SELECT *
+FROM `foo.bar.old`;
+```
+
 ## Date and time
 
 ### Timestamp to date and time
