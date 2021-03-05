@@ -20,7 +20,8 @@
 
 ```bigquery
 SELECT *
-FROM `foo.bar.INFORMATION_SCHEMA.TABLES`;
+FROM `foo.bar.INFORMATION_SCHEMA.TABLES`
+WHERE table_name LIKE "%foo%";
 ```
 
 ## SELECT
