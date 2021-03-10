@@ -198,6 +198,10 @@ or
 
 ## Transform
 
+### Fill missing values
+
+`df.fillna('foo', inline=True)`
+
 ### Apply function
 
 `df['foo'] = df['bar'].apply(lambda x: f(x))` for individual values
