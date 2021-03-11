@@ -59,6 +59,16 @@ SELECT PERCENTILE_CONT(x, 0.5) OVER() AS median
 FROM UNNEST ([0, 1, 2, 3]) AS x
 ```
 
+### ROW_NUMBER
+
+```bigquery
+SELECT foo, bar, ROW_NUMBER() OVER (
+PARTITION BY foo
+ORDER BY bar
+) AS row_number
+FROM foo_bar
+```
+
 ## CREATE
 
 ```bigquery
