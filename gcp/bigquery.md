@@ -10,6 +10,10 @@
 
 `bq --project_id foo ls bar`
 
+### Update tables
+
+`bq update --expiration 0 foo.bar.table`
+
 ### Delete tables
 
 `bq --project_id foo rm -f -t bar.table`
