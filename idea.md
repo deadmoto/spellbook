@@ -28,6 +28,9 @@ idea.log.path=~/.config/idea-2020.3/logs
 * Key Promoter X
 * GitLink
 
+> To access preview versions of plugins add plugin repository:
+> https://plugins.jetbrains.com/plugins/list?channel=beta
+
 ## Structural search
 
 ### Instance method
