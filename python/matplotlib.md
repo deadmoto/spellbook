@@ -1,7 +1,5 @@
 # Matplotlib
 
-## Import Matplotlib
-
 ```python
 import matplotlib.pyplot as plt
 %matplotlib inline
@@ -11,19 +9,21 @@ import matplotlib.pyplot as plt
 
 ### Title
 
-`plt.title('Title')`
+`plt.title('foo')` or `ax.set_title('bar')`
 
 ### Axis label
 
-`plt.xlabel('foo')`
-or
-`plt.ylabel('bar')`
+`plt.xlabel('foo')` or `plt.ylabel('bar')`
 
 ### Figure size
 
 `fig = plt.figure(figsize=(16, 9))`
 
 ## Plots
+
+### Subplot
+
+`ax = fig.add_subplot()`
 
 ### Line plot
 
@@ -80,7 +80,3 @@ figure = plt.gcf()
 axis = figure.gca()
 axis.add_artist(circle)
 ```
-
-# TODO
-## stacked barplot
-## boxplot
