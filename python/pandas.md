@@ -153,7 +153,13 @@ df = pd.io.gbq.read_gbq(f'''
 
 `df[df.foo == 'bar']`
 or
+`df[df.foo.eq('bar')]`
+or
 `df[df.foo.isin(['bar'])`
+
+### Filter substring matches
+
+`df[df.foo.str.contains('bar'')]`
 
 ### Distinct
 
