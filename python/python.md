@@ -103,7 +103,7 @@ my_dict = defaultdict(list)
 
 ### Delete value
 
-`foo.pop('bar')` or `foo.del('bar')`
+`foo.pop('bar')` or `foo.del('bar')` or `del foo['bar']`
 
 ### Merge
 
