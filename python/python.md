@@ -3,7 +3,12 @@
 ## pip
 
 ### Install package
+
 `pip install tensorflow==1.1`
+
+### Uninstall all
+
+`pip freeze | xargs pip uninstall -y`
 
 ### pip config locations
 
