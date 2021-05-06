@@ -57,6 +57,16 @@ gcloud iam service-accounts keys create $GOOGLE_APPLICATION_CREDENTIALS \
 
 `gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS`
 
+## App Engine
+
+### List versions
+
+`gcloud app versions list --project bar`
+
+### Delete version
+
+`gcloud app versions delete foo --project bar`
+
 ## Compute Engine
 
 ### Supported images
@@ -70,6 +80,12 @@ gcloud compute instances create foo \
     --image-family debian-10 \
     --image-project bar
 ```
+
+## Kubernetes
+
+### List clusters
+
+`gcloud container clusters list --project foo --zone us-central1-c`
 
 ## Containers
 
