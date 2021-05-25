@@ -26,6 +26,14 @@ gcloud auth configure-docker
 
 `gcloud config set project foo`
 
+### Get default project
+
+`export PROJECT_ID=$(gcloud config get-value project)`
+
+### Get default project number
+
+`export PROJECT_NUMBER=$(gcloud projects list --filter="$PROJECT_ID" --format="value(PROJECT_NUMBER)")`
+
 ### Transfer SSH keys
 
 `gcloud compute os-login ssh-keys add --key-file ~/.ssh/google_compute_engine.pub`
