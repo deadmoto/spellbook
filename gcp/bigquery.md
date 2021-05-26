@@ -44,7 +44,7 @@ FROM foobar
 ```bigquery
 SELECT *
 FROM foo
-CROSS JOIN UNNEST(bar)
+CROSS JOIN UNNEST(bar) WITH OFFSET AS pos
 ```
 
 ### CASE
