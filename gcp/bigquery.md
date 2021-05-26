@@ -81,6 +81,13 @@ SELECT *
 FROM `foo.bar.old`;
 ```
 
+### With TTL
+
+```bigquery
+CREATE TABLE ...
+OPTIONS (expiration_timestamp=TIMESTAMP(DATE_ADD(CURRENT_DATE(), INTERVAL 1 DAY)))
+```
+
 ## Date and time
 
 ### Timestamp to date and time
