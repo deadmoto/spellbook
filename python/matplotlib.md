@@ -15,6 +15,14 @@ import matplotlib.pyplot as plt
 
 `plt.xlabel('foo')` or `plt.ylabel('bar')`
 
+### Integer X axis
+
+```python
+from matplotlib.ticker import MaxNLocator
+
+ax.xaxis.set_major_locator(MaxNLocator(integer=True))
+```
+
 ### Figure size
 
 `fig = plt.figure(figsize=(16, 9))`
