@@ -153,9 +153,8 @@ git reset --hard origin/master
 git config --global alias.br branch
 git config --global alias.co checkout
 git config --global alias.cm 'commit -m'
+git config --global alias.em 'commit --allow-empty -m "build"'
 git config --global alias.rs 'reset HEAD --'
-git config --global alias.sm 'submodule update --init --recursive'
+git config --global alias.sm '!f(){ git pull "$@" && git submodule update --init --recursive; }; f'
 git config --global alias.st status
 ```
-
-git config --global alias.pullall '!f(){ git pull "$@" && git submodule update --init --recursive; }; f'
