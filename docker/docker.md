@@ -53,6 +53,10 @@ or
 
 `docker exec -d foo echo bar`
 
+### Start container on daemon start
+
+`docker update --restart unless-stopped deluge`
+
 ### Stop container
 
 `docker stop jupyter`
