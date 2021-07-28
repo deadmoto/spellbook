@@ -155,6 +155,6 @@ git config --global alias.co checkout
 git config --global alias.cm 'commit -m'
 git config --global alias.em 'commit --allow-empty -m "build"'
 git config --global alias.rs 'reset HEAD --'
-git config --global alias.sm '!f(){ git pull "$@" && git submodule update --init --recursive; }; f'
+git config --global alias.sm '!f(){ git pull --ff-only "$@" && git submodule update --init --recursive; }; f'
 git config --global alias.st status
 ```
