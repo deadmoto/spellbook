@@ -16,6 +16,16 @@
 
 `echo foo | tee -a bar.log`
 
+## History expansion
+
+## Last command substitution
+
+`sudo !!` or `sudo !-1`
+
+## Last argument substitution
+
+`cat !$` or `cat !!:$`
+
 ## Exit code
 
 `echo $?`
