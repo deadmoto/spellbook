@@ -18,19 +18,25 @@
 
 ## History expansion
 
-## Last command substitution
+### Disable history
+
+` echo Nobody will know`
+
+### Last command substitution
 
 `sudo !!` or `sudo !-1`
 
-## Last argument substitution
+### Last argument substitution
 
 `cat !$` or `cat !!:$`
 
-## Exit code
+### Exit code
 
 `echo $?`
 
-## Left trim
+## Strings
+
+### Left trim
 
 ```
 STRING="foo:bar"
@@ -38,154 +44,38 @@ echo "${STRING##*:}"
 
 ```
 
-## Right trim
+### Right trim
 
 ```
 STRING="foo:bar"
 echo "${STRING%:bar}"
 ```
 
-## Disable bash history
+## Loops
 
-` echo Run history command`
-
-## Alias with parameters
-
-`alias foo='f(){ echo "$@"; unset -f f; };f'`
-
-## For loop with range
+### For loop with range
 
 `for foo in bar{1..3}; do echo "$foo"; done`
 
-## For loop with seq
+### For loop with seq
 
 `for bar in $(seq -w 1 10); do echo "foo$bar"; done`
 
-## Alert
+### while
 
-`echo -e "\a"`
+```bash
+while [[ -x "foo" ]]; do
+    echo bar
+done
+```
 
-## grep
+### until
 
-### Search recursively
-
-`grep -r "ProtoCoder" .`
-
-### Match line start
-
-`grep ^output_base:`
-
-### Include lines after
-
-`grep -A 3`
-
-### Include lines before
-
-`grep -B 3`
-
-### Exclude lines
-
-`grep -v "foo"`
-
-## sed
-
-### Inplace replace
-
-`sed -e "s/foo/bar/"`
-
-## curl
-
-### Follow redirects
-
-`curl -L http://example.com`
-
-### Request with cookies
-
-`curl --cookie "foo=bar" http://example.com`
-
-## cut
-
-### Cut n-th segment
-
-`cut -d; -f2`
-
-## find
-
-### Find files recursively
-
-`find . -name "*.iml"` or `find . -name "*.iml" -print`
-
-### Find and delete files recursively
-
-`find . -name "*.iml" -delete`
-
-### Find only files
-
-`find . -type f`
-
-## grep
-
-### Find lines matching regular expression
-
-`egrep -o 'https?:.*mp3'`
-
-### Find files containing string
-
-`grep -r --include=*.proto MultidayFeatureSet .`
-
-## ls
-
-### Follow symlinks
-
-`ls -lH`
-
-## nl
-
-### Print line number
-
-`nl file.txt`
-
-## zip
-
-#### Delete file from archive
-
-`zip -d archive.zip file.txt`
-
-#### List zip file contents
-
-`unzip -l archive.zip`
-
-#### Unpack archive silently
-
-`unzip -q archive.zip`
-
-#### Unpack archive overwriting existing files
-
-`unzip -o archive.zip`
-
-## sort
-
-### Sort by first column only
-
-`sort -k1,1`
-
-### Sort by second column using delimiter 
-
-`sort -t: -k2,2`
-
-### Reversed order
-
-`sort -k1r`
-
-
-## tree
-
-`tree`
-
-## wget
-
-`wget -i downloads.txt`
-
+```bash
+until ! [[ -x "foo" ]]; do
+    echo bar
+done
+```
 ## Files
 
 ### Create temporary directory
@@ -248,22 +138,6 @@ if ! [[ -x "$(which brew)" ]]; then
 fi
 ```
 
-## while
-
-```bash
-while [[ -x "foo" ]]; do
-    echo bar
-done
-```
-
-## until
-
-```bash
-until ! [[ -x "foo" ]]; do
-    echo bar
-done
-```
-
 ## Arrays
 
 ### Declare array
@@ -281,3 +155,132 @@ done
 ### Print array length
 
 `echo $#{foo[@]}`
+
+## grep
+
+### Match regular expression
+
+`egrep -o 'https?:.*html'`
+
+### Search recursively
+
+`grep -r "ProtoCoder" .`
+
+### Match line start
+
+`grep ^output_base:`
+
+### Include lines after
+
+`grep -A 3`
+
+### Include lines before
+
+`grep -B 3`
+
+### Exclude lines
+
+`grep -v "foo"`
+
+### Match filename
+
+`grep -r --include=*.foo "bar" .`
+
+## sed
+
+### Inplace replace
+
+`sed -e "s/foo/bar/"`
+
+## curl
+
+### Follow redirects
+
+`curl -L http://example.com`
+
+### Request with cookies
+
+`curl --cookie "foo=bar" http://example.com`
+
+## cut
+
+### Cut n-th segment
+
+`cut -d; -f2`
+
+## find
+
+### Find files recursively
+
+`find . -name "*.iml"` or `find . -name "*.iml" -print`
+
+### Find and delete files recursively
+
+`find . -name "*.iml" -delete`
+
+### Find only files
+
+`find . -type f`
+
+## ls
+
+### Follow symlinks
+
+`ls -lH`
+
+## nl
+
+### Print line number
+
+`nl file.txt`
+
+## zip
+
+#### Delete file from archive
+
+`zip -d archive.zip file.txt`
+
+#### List zip file contents
+
+`unzip -l archive.zip`
+
+#### Unpack archive silently
+
+`unzip -q archive.zip`
+
+#### Unpack archive overwriting existing files
+
+`unzip -o archive.zip`
+
+## sort
+
+### Sort by first column only
+
+`sort -k1,1`
+
+### Sort by second column using delimiter
+
+`sort -t: -k2,2`
+
+### Reversed order
+
+`sort -k1r`
+
+
+## tree
+
+`tree`
+
+## wget
+
+`wget -i downloads.txt`
+
+## Other
+
+### Alias with parameters
+
+`alias foo='f(){ echo "$@"; unset -f f; };f'`
+
+### Alert
+
+`echo -e "\a"`
