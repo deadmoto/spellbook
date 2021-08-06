@@ -140,13 +140,21 @@ fi
 
 ## Arrays
 
-### Declare array
+### Declare
 
 `declare -a foo=()`
 
-### Append to array
+### Append
 
 `foo+=(bar)`
+
+### Expand as one argument
+
+`${foo[*]}`
+
+### Expand as multiple arguments
+
+`${foo[@]}`
 
 ### Print array
 
