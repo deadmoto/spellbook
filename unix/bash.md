@@ -214,7 +214,7 @@ fi
 
 ### Cut n-th segment
 
-`cut -d; -f2`
+`cut -d; -f2` or `cut --delimiter=; --fields=2`
 
 ## find
 
