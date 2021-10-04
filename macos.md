@@ -4,6 +4,10 @@
 
 `pmset noidle`
 
+## Power status
+
+`pmset -g batt`
+
 ## Watch Spotlight indexing
 
 `sudo fs_usage -w -f filesys mds`
