@@ -289,6 +289,16 @@ fi
 
 `alias foo='f(){ echo "$@"; unset -f f; };f'`
 
-### Alert
+## Alerts
+
+### Shell alert
 
 `echo -e "\a"`
+
+### Telegram alert
+
+```shell
+curl -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage \
+  -H 'Content-Type: application/json' \
+  -d '{"chat_id": "123456789", "text": "This is a alert from bash", "disable_notification": true}'
+```
