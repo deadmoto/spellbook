@@ -1,5 +1,15 @@
 # Python
 
+## Modules
+
+### Python path
+
+`sys.path`
+
+### Module path
+
+`print(os.__file__)`
+
 ## pip
 
 ### Install package
