@@ -65,6 +65,12 @@ corr = df.corr()
 plt.matshow(corr)
 ```
 
+### Legend location
+
+```python
+plt.legend(loc='lower left')
+```
+
 ## Images
 
 ### Load image from file
