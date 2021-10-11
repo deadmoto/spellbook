@@ -1,12 +1,18 @@
 # macOS
 
-## Prevent sleep
+## Power
+
+### Prevent sleep
 
 `pmset noidle`
 
-## Power status
+### Power status
 
 `pmset -g batt`
+
+### Thermal throttling status
+
+`pmset -g thermlog`
 
 ## Watch Spotlight indexing
 
