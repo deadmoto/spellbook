@@ -58,3 +58,7 @@ echo -e "instance = [INSTANCE_ID]" >> ~/.cbtrc
 ### Delete family
 
 `cbt -project foo -instance bar deletefamily my_table my_family`
+
+### Delete row
+
+`cbt -project foo -instance bar deleterow my_table my_row`
