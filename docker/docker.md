@@ -8,6 +8,10 @@
 or
 `docker pull ubuntu`
 
+### Extract image
+
+`docker save ubuntu:latest | tar zxf -`
+
 ### List images
 
 `docker images`
