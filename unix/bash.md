@@ -274,6 +274,11 @@ fi
 
 `sort -k1r`
 
+## tar
+
+### Extract to directory
+
+`tar -xf foo.tar -C /bar` or `tar --extract --file foo.tar --directory /bar`
 
 ## tree
 
