@@ -88,6 +88,14 @@ CREATE TABLE ...
 OPTIONS (expiration_timestamp=TIMESTAMP(DATE_ADD(CURRENT_DATE(), INTERVAL 1 DAY)))
 ```
 
+### Function
+
+```bigquery
+CREATE TEMPORARY FUNCTION FOO(bar INTEGER)
+  RETURNS INTEGER
+  AS (IF(bar == 42, 1, 0));
+```
+
 ## Date and time
 
 ### Timestamp to date and time
