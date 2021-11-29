@@ -2,7 +2,13 @@
 
 ## Devices
 
+### List devices
+
 `adb devices -l`
+
+### Run command on USB device
+
+`adb -d shell`
 
 ## Files
 
