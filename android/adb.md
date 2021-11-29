@@ -1,5 +1,13 @@
 # ADB
 
+## Devices
+
+`adb devices -l`
+
+## Files
+
+`adb push foo.bar /sdcard/Downloads/foo.bar`
+
 ## Package Manager
 
 ### List packages
