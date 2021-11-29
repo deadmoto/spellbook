@@ -12,6 +12,12 @@
 
 ## Files
 
+### Disk space
+
+`adb shell df`
+
+### Upload file
+
 `adb push foo.bar /sdcard/Downloads/foo.bar`
 
 ## Package Manager
