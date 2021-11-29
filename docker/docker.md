@@ -1,5 +1,9 @@
 # Docker
 
+## Cleanup
+
+`docker system prune`
+
 ## Images
 
 ### Pull image
@@ -86,7 +90,7 @@ or
 
 ### Remove unused containers
 
-`docker container prune`
+`docker container prune` or `docker container prune -a`
 
 ## Docker Compose
 
