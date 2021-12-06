@@ -42,14 +42,27 @@ or
 
 ## Containers
 
-### Run container
+### Run
+
+#### Specific image version
+
+`docker run alpine:edge`
+
+#### Named container
+
 `docker run --name ubuntu ubuntu`
 
-### Run container with cached volume (macOS only)
+#### Cached volume (macOS only)
+
 `docker run -v /opt:/opt:cached ubuntu`
 
-### Run container with specific image version
-`docker run --name jupyter jupyter/tensorflow-notebook:4d19a9839c05`
+#### Expose ports
+
+`docker run --expose=6881-6891 ubuntu`
+
+#### Publish ports
+
+`docker run -p 127.0.0.1:8112:8112 ubuntu`
 
 ### Start container
 
