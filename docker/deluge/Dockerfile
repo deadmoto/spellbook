@@ -7,4 +7,6 @@ RUN \
   apk add bash py-pip deluge@testing && \
   rm -rf /var/cache/apk/*
 
-CMD /usr/bin/deluged & /usr/bin/deluge-web & /bin/bash
+ADD core.conf /root/.config/deluge/core.conf
+
+CMD /usr/bin/deluged & /usr/bin/deluge-web --do-not-daemonize
