@@ -1,7 +1,13 @@
 # Windows
 
-## Disk Management
+## Performance
 
-### Disk Performance test
+### Disk
 
 `winsat disk -drive c`
+
+### Score
+
+`winsat formal`
+or
+`Get-CimInstance Win32_WinSat`
