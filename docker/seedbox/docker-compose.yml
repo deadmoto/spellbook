@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  wireguard:
+    build: wireguard
+    privileged: true
+    ports:
+      - "6891:6891"
+      - "8112:8112"
+    restart: always
+  deluge:
+    build: deluge
+    network_mode: service:wireguard
+    volumes:
+      - ${HOME}/.config/deluge/:/root/.config/deluge/:cached
+      - ${HOME}/Downloads/:/root/Downloads/:cached
+    restart: always
