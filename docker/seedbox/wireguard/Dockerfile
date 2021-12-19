@@ -6,6 +6,8 @@ RUN \
   apk add bash wireguard-tools && \
   rm -rf /var/cache/apk/*
 
-COPY etc/wireguard/wg0.conf /etc/wireguard/wg0.conf
+ADD etc/ /etc/
 
-CMD wg-quick up wg0 && tail -f /dev/null
+RUN chmod +x /etc/wireguard/wireguard.sh
+
+CMD /etc/wireguard/wireguard.sh
