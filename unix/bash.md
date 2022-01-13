@@ -82,6 +82,16 @@ done
 
 `tmp=$(mktemp -d)`
 
+## Network
+
+### List interfaces
+
+`ip link`
+
+### List ports
+
+`netstat -punta`
+
 ## Arithmetic expansion
 
 ### Evaluate expression
