@@ -3,7 +3,7 @@ FROM alpine:edge
 RUN \
   apk update && \
   apk add --upgrade apk-tools && \
-  apk add bash wireguard-tools && \
+  apk add bash wireguard-tools ulogd && \
   rm -rf /var/cache/apk/*
 
 ADD etc/ /etc/
