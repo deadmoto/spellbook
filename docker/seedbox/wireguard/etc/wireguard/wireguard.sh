@@ -15,7 +15,6 @@ iptables -A INPUT -i lo -j ACCEPT
 iptables -A INPUT -p tcp --dport 6891 -j ACCEPT
 iptables -A INPUT -p udp --dport 6891 -j ACCEPT
 iptables -A INPUT -p tcp --dport 8112 -j ACCEPT
-iptables -A INPUT -p tcp --dport 58846 -j ACCEPT
 
 iptables -P FORWARD DROP
 
