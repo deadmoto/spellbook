@@ -117,6 +117,10 @@ or
 
 `docker-compose up --name debian`
 
+### Build images
+
+`docker-compose up --build`
+
 ### Recreate containers
 
 `docker-compose up --force-recreate`
