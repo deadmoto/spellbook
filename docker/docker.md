@@ -107,12 +107,23 @@ or
 
 ## Docker Compose
 
-docker-compose build
+`docker-compose build`
 
-### Run container
+### Run in background
+
+`docker-compose up -d`
+
+### Run a named container
+
 `docker-compose up --name debian`
 
-docker-compose build && docker-compose up
+### Recreate containers
+
+`docker-compose up --force-recreate`
+
+### Remove orphans
+
+`docker-compose up --remove-orphans`
 
 ## Popular images
 
