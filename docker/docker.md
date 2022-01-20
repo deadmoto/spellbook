@@ -125,6 +125,10 @@ or
 
 `docker-compose up --remove-orphans`
 
+### Keep container running
+
+`command: tail -f /dev/null`
+
 ## Popular images
 
 ### Debian
