@@ -8,6 +8,8 @@ services:
       - "8112:8112"
     restart: always
   deluge:
+    depends_on:
+      - wireguard
     build: deluge
     network_mode: service:wireguard
     volumes:
