@@ -2,9 +2,9 @@
 
 ## Show rules
 
-`iptables -L -n -v --line-numbers INPUT`
+`iptables -L -vnx --line-numbers INPUT`
 or
-`iptables --list --numeric --verbose --line-numbers INPUT`
+`iptables --list --verbose --numeric --exact --line-numbers INPUT`
 
 ## Delete rules in chain
 
