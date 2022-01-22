@@ -3,6 +3,9 @@
 ulogd --daemon
 cat /var/log/ulogd.log
 
+# Wireguard would route all but it's own packets via wg0
+ip route add to 192.168.0.0/24 via $(ip route show default | cut -d ' ' -f 3) dev eth0
+
 iptables -F
 
 iptables -P INPUT DROP
