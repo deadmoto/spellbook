@@ -1,5 +1,9 @@
 # Docker
 
+## Remote
+
+`export DOCKER_HOST=ssh://username@example.com`
+
 ## Cleanup
 
 `docker system prune`
