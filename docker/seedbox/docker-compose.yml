@@ -6,7 +6,7 @@ services:
     ports:
       - "6891:6891"
       - "8112:8112"
-    restart: always
+    restart: unless-stopped
   deluge:
     depends_on:
       - wireguard
@@ -15,7 +15,7 @@ services:
     volumes:
       - ${HOME}/.config/deluge/:/root/.config/deluge/:cached
       - ${HOME}/Downloads/:/root/Downloads/:cached
-    restart: always
+    restart: unless-stopped
   plex:
     image: lscr.io/linuxserver/plex:arm32v7-latest
     network_mode: host
@@ -24,4 +24,4 @@ services:
       - ${HOME}/Movies/:/movies:cached
     environment:
       - VERSION=docker
-    restart: always
+    restart: unless-stopped
