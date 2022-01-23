@@ -16,3 +16,12 @@ services:
       - ${HOME}/.config/deluge/:/root/.config/deluge/:cached
       - ${HOME}/Downloads/:/root/Downloads/:cached
     restart: always
+  plex:
+    image: lscr.io/linuxserver/plex:arm32v7-latest
+    network_mode: host
+    volumes:
+      - ${HOME}/.config/plex/:/config:cached
+      - ${HOME}/Movies/:/movies:cached
+    environment:
+      - VERSION=docker
+    restart: always
