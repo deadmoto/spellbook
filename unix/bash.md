@@ -92,6 +92,12 @@ done
 
 `netstat -punta`
 
+### Local SSH tunnel
+
+`ssh -L 8080:127.0.0.1:80 example.com`
+
+> NOTE: schema is <local_port>:<target_host>:<target_port> <ssh_host>
+
 ## Arithmetic expansion
 
 ### Evaluate expression
