@@ -82,11 +82,19 @@ done
 
 `tmp=$(mktemp -d)`
 
+### Open files
+
+`lsof /foo/bar`
+
 ## Network
 
 ### List interfaces
 
 `ip link`
+
+### List wireless interfaces
+
+`iwconfig`
 
 ### List ports
 
