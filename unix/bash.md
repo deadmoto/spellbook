@@ -86,6 +86,20 @@ done
 
 `lsof /foo/bar`
 
+### Synchronize local directories
+
+`rsync --verbose --recursive --inplace /from/ /to`
+
+> NOTE: without `/` at the end of the source path a directory `from` will be created inside `to` 
+
+### Disk info (usage)
+
+`df -h`
+
+### Disk info (inodes)
+
+`df -i`
+
 ## Network
 
 ### List interfaces
