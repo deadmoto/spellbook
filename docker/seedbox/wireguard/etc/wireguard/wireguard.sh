@@ -14,6 +14,9 @@ iptables -A INPUT -i lo -j ACCEPT
 iptables -A INPUT -p tcp --dport 8112 -j ACCEPT # Deluge - Web UI
 iptables -A INPUT -p tcp --dport 6891 -j ACCEPT
 iptables -A INPUT -p udp --dport 6891 -j ACCEPT
+iptables -A INPUT -p udp --dport 32412 -j DROP # Roku
+iptables -A INPUT -p udp --dport 32414 -j DROP # Roku
+iptables -A INPUT -p udp --dport 67 -j DROP # DHCP response
 iptables -A INPUT -j NFLOG --nflog-group 0 --nflog-prefix "INPUT dropped: "
 
 iptables -P FORWARD DROP
