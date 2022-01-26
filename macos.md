@@ -14,6 +14,12 @@
 
 `pmset -g thermlog`
 
+## Network
+
+`defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE`
+> NOTE: run `killall Finder` to apply settings immediately 
+
+
 ## Watch Spotlight indexing
 
 `sudo fs_usage -w -f filesys mds`
@@ -31,17 +37,24 @@
 `brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/a4cd6cac4fb65f447e3b47e63a8d58b9508d2cd4/Formula/protobuf.rb`
 
 ### Pin version
+
 `brew pin protobuf`
 
 ### Uninstall
+
 `brew uninstall protobuf`
 
 ### Update
-`brew outdated`
-`brew upgrade`
+
+`brew outdated` and `brew upgrade`
 
 ### Untap
+
 `brew untap bazelbuild/tap`
-``
-### NCDU
-`brew install ncdu`
+
+## Useful utilities
+
+`k9s`
+`lazydocker`
+`mc`
+`ncdu`
