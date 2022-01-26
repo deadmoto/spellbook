@@ -76,6 +76,7 @@ until ! [[ -x "foo" ]]; do
     echo bar
 done
 ```
+
 ## Files
 
 ### Create temporary directory
@@ -99,6 +100,14 @@ done
 ### Disk info (inodes)
 
 `df -i`
+
+### List partitions
+
+`fdisk -l`
+
+### Partition UUID
+
+`blkid` or `blkid /dev/sda1`
 
 ## Network
 
