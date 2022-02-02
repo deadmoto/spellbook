@@ -52,13 +52,17 @@ df = pd.io.gbq.read_gbq(f'''
 
 `df = df.set_index('foo')`
 
+### Join rows
+
+`df = pd.concat([df_hi, df_lo], axis=0).reset_index(drop=True)`
+
 ### Join columns
 
 `df = pd.concat([df['foo'], df['bar']], axis=1)`
 
-### Join rows
+### Join columns (multi-index)
 
-`df = pd.concat([df_foo, df_bar], axis=0).reset_index(drop=True)`
+`df = pd.concat([df_left, df_right], axis=1, keys=['left', 'right'], join='outer')`
 
 ### Pivot
 
