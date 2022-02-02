@@ -172,3 +172,12 @@ with open('some.csv', 'wb') as f:
 `python -m SimpleHTTPServer 8080`
 or
 `python3 -m http.server 8080`
+
+## rich
+
+### inspect
+
+```python
+from rich import inspect
+inspect(inspect)
+```
