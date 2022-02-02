@@ -93,6 +93,10 @@ done
 
 > NOTE: without `/` at the end of the source path a directory `from` will be created inside `to` 
 
+### Find duplicates
+
+`fdupes -r -S -t foo/ bar/`
+
 ### Disk info (usage)
 
 `df -h`
