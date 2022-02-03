@@ -19,6 +19,24 @@
 `defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE`
 > NOTE: run `killall Finder` to apply settings immediately 
 
+## Bluetooth
+
+### Audio codec
+
+Launch Console app, search for `bluetoothd` (select PROCESS type instead of ANY), look for messages containing `codec`:
+- kBTAudioMsgPropertyCodec
+
+### Check defaults
+
+`sudo defaults read bluetoothaudiod`
+
+### Enable AptX
+
+`sudo defaults write bluetoothaudiod "Enable AptX codec" -bool true`
+
+### Enable AAC
+
+`sudo defaults write bluetoothaudiod "Enable AAC codec" -bool true`
 
 ## Watch Spotlight indexing
 
