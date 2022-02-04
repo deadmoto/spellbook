@@ -1,5 +1,15 @@
 # macOS
 
+## Files
+
+### Disk devices
+
+`diskutil list`
+
+### Disk copy
+
+`dd if=/dev/disk1 of=/foo.bin bs=1m`
+
 ## Power
 
 ### Prevent sleep
