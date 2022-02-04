@@ -17,6 +17,7 @@
 ## Remove files not in index
 
 `git clean -fdx`
+> NOTE: this will delete ALL files not in Git index
 
 ## Unstage file
 
