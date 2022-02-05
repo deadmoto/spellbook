@@ -4,6 +4,10 @@
 
 `export DOCKER_HOST=ssh://username@example.com`
 
+## Non-root user
+
+`sudo usermod -aG docker $USER`
+
 ## Cleanup
 
 `docker system prune`
