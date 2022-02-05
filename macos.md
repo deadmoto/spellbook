@@ -6,6 +6,14 @@
 
 `diskutil list`
 
+### Unmount disk
+
+`diskutil unmountDisk /dev/disk1`
+
+### Eject disk
+
+`diskutil eject /dev/disk1`
+
 ### Disk copy
 
 `dd if=/dev/disk1 of=/foo.bin bs=1m`
@@ -86,3 +94,6 @@ Launch Console app, search for `bluetoothd` (select PROCESS type instead of ANY)
 `lazydocker`
 `mc`
 `ncdu`
+
+
+dd if=/Users/deadmoto/Downloads/spellbook/pi.img of=/dev/disk2
