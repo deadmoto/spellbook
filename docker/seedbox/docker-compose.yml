@@ -37,5 +37,6 @@ services:
     build: earnapp
   grafana:
     build: grafana
+    network_mode: host
     volumes:
       - /var/log:/var/log
