@@ -35,3 +35,7 @@ services:
     restart: unless-stopped
   earnapp:
     build: earnapp
+  grafana:
+    build: grafana
+    volumes:
+      - /var/log:/var/log
