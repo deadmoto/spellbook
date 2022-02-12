@@ -1,2 +1,8 @@
+# IDEA
 /.idea/
 /*.iml
+
+# Terraform
+.terraform/
+.terraform.*
+terraform.*
