@@ -71,6 +71,26 @@ resource oci_core_default_security_list wireguard_security_list {
     }
   }
   ingress_security_rules {
+    protocol    = "6"
+    source      = "0.0.0.0/0"
+    source_type = "CIDR_BLOCK"
+    stateless   = "false"
+    tcp_options {
+      max = "8112"
+      min = "8112"
+    }
+  }
+  ingress_security_rules {
+    protocol    = "17"
+    source      = "0.0.0.0/0"
+    source_type = "CIDR_BLOCK"
+    stateless   = "true"
+    udp_options {
+      max = "6891"
+      min = "6891"
+    }
+  }
+  ingress_security_rules {
     protocol    = "17"
     source      = "0.0.0.0/0"
     source_type = "CIDR_BLOCK"

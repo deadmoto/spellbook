@@ -15,11 +15,14 @@ sysctl -p
 echo Enable IP masquerade
 firewall-offline-cmd --zone=public --add-masquerade
 
-echo Enable Wireguard UDP port 51820
-firewall-offline-cmd --zone=public --add-port=51820/udp
+echo Enable Deluge UDP port 6891
+firewall-offline-cmd --zone=public --add-forward-port=port=6891:proto=udp:toport=6891:toaddr=172.16.0.2
 
 echo Enable Deluge TCP port 8112
 firewall-offline-cmd --zone=public --add-forward-port=port=8112:proto=tcp:toport=8112:toaddr=172.16.0.2
+
+echo Enable Wireguard UDP port 51820
+firewall-offline-cmd --zone=public --add-port=51820/udp
 
 echo Apply firewalld settings
 systemctl restart firewalld
