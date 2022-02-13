@@ -2,7 +2,27 @@
 # Wireshark Server startup script for Oracle Cloud Infrastructure.
 
 echo Install packages
-yum install -y wireguard-tools qrencode
+dnf install oraclelinux-developer-release-el8
+dnf config-manager --disable ol8_developer
+dnf config-manager --enable ol8_developer_UEKR6
+dnf config-manager --save --setopt=ol8_developer_UEKR6.includepkgs='wireguard-tools*'
+dnf install -y wireguard-tools
+
+echo Enable NAT
+echo "net.ipv4.ip_forward=1" > /etc/sysctl.conf
+sysctl -p
+
+echo Enable IP masquerade
+firewall-offline-cmd --zone=public --add-masquerade
+
+echo Enable Wireguard UDP port 51820
+firewall-offline-cmd --zone=public --add-port=51820/udp
+
+echo Enable Deluge TCP port 8112
+firewall-offline-cmd --zone=public --add-forward-port=port=8112:proto=tcp:toport=8112:toaddr=172.16.0.2
+
+echo Apply firewalld settings
+systemctl restart firewalld
 
 echo Retrieve OCI metadata
 IFACE=$(ip -o -4 route show to default | awk '{print $5}' | head -n 1)
@@ -33,11 +53,4 @@ chmod 600 /etc/wireguard/wg0.conf
 systemctl enable wg-quick@wg0
 wg-quick up wg0
 
-echo Set up NAT
-echo "net.ipv4.ip_forward=1" > /etc/sysctl.conf
-sysctl -p
-
-echo Configure Firewall
-firewall-offline-cmd --zone=public --add-port=51820/udp
-systemctl restart firewalld
 echo Bootstrap complete!
