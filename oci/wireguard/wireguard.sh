@@ -15,6 +15,9 @@ sysctl -p
 echo Enable IP masquerade
 firewall-offline-cmd --zone=public --add-masquerade
 
+echo Enable Deluge TCP port 6891
+firewall-offline-cmd --zone=public --add-forward-port=port=6891:proto=tcp:toport=6891:toaddr=172.16.0.2
+
 echo Enable Deluge UDP port 6891
 firewall-offline-cmd --zone=public --add-forward-port=port=6891:proto=udp:toport=6891:toaddr=172.16.0.2
 
