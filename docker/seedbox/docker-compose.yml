@@ -4,7 +4,6 @@ services:
     build: wireguard
     privileged: true
     ports:
-      - "6891:6891"
       - "8112:8112"
     restart: unless-stopped
   deluge:
