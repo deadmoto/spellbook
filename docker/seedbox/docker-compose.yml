@@ -12,14 +12,14 @@ services:
     build: deluge
     network_mode: service:wireguard
     volumes:
-      - ${HOME}/.config/deluge/:/root/.config/deluge/:cached
+      - /home/pi/.config/deluge/:/root/.config/deluge/
       - ${HOME}/Downloads/:/root/Downloads/:cached
     restart: unless-stopped
   plex:
     image: lscr.io/linuxserver/plex:arm32v7-latest
     network_mode: host
     volumes:
-      - ${HOME}/.config/plex/:/config:cached
+      - /home/pi/.config/plex/:/config/
       - ${HOME}/Movies/:/movies:cached
     environment:
       - VERSION=docker
