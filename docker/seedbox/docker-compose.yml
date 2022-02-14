@@ -32,8 +32,6 @@ services:
       - /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket
       - /var/run/dbus:/var/run/dbus
     restart: unless-stopped
-  earnapp:
-    build: earnapp
   grafana:
     build: grafana
     network_mode: host
