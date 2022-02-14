@@ -13,14 +13,14 @@ services:
     network_mode: service:wireguard
     volumes:
       - /home/pi/.config/deluge/:/root/.config/deluge/
-      - ${HOME}/Downloads/:/root/Downloads/:cached
+      - /media/external/deluge/:/root/Downloads/
     restart: unless-stopped
   plex:
     image: lscr.io/linuxserver/plex:arm32v7-latest
     network_mode: host
     volumes:
       - /home/pi/.config/plex/:/config/
-      - ${HOME}/Movies/:/movies:cached
+      - /media/external/deluge/:/movies
     environment:
       - VERSION=docker
     restart: unless-stopped
@@ -28,7 +28,7 @@ services:
     build: samba
     network_mode: host
     volumes:
-      - ${HOME}/Public/:/samba/PUBLIC
+      - /media/external/:/samba/PUBLIC
       - /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket
       - /var/run/dbus:/var/run/dbus
     restart: unless-stopped
