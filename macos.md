@@ -28,6 +28,19 @@
 
 `pmset -g batt`
 
+### Sleep log
+
+`pmset -g log | grep -E 'Wake from|Entering Sleep'`
+
+### Power Nap
+
+`pmset -a powernap 0` or `pmset -b powernap 0` and `pmset -c powernap 0`
+
+### Wake up for network 
+
+`pmset -b tcpkeepalive 1` and `pmset -c tcpkeepalive 0`
+> WARNING: this may disrupt Find My feature.
+
 ### Thermal throttling status
 
 `pmset -g thermlog`
