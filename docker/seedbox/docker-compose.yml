@@ -37,4 +37,4 @@ services:
     network_mode: host
     volumes:
       - /var/log:/var/log
-      - /media/external/:/media/external/
+      - /media/external/:/media/external/:ro
