@@ -98,6 +98,12 @@ CREATE TEMPORARY FUNCTION FOO(bar INTEGER)
 
 ## Date and time
 
+### Subtract interval
+
+```bigquery
+DECLARE min_table_suffix DEFAULT FORMAT_DATE("%Y%m%d", DATE_SUB(CURRENT_DATE(), INTERVAL 14 DAY));
+```
+
 ### Timestamp to date and time
 
 `EXTRACT(DATETIME FROM ts AT TIME ZONE America/Los_Angeles)`
