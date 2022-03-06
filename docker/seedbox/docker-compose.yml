@@ -38,3 +38,9 @@ services:
     volumes:
       - /var/log:/var/log
       - /media/external/:/media/external/:ro
+  jenkins:
+    build: jenkins
+    ports:
+      - "0.0.0.0:8080:8080"
+    volumes:
+      - /home/pi/.config/jenkins:/var/jenkins_home
