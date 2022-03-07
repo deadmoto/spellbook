@@ -89,9 +89,13 @@ done
 
 ### Synchronize local directories
 
-`rsync --verbose --recursive --inplace /from/ /to`
+`rsync --recursive --inplace --verbose /from/ /to`
 
 > NOTE: without `/` at the end of the source path a directory `from` will be created inside `to` 
+
+### Merge directories
+
+`rsync --recursive --remove-source-files --itemize-changes --stats --verbose /from/ /to`
 
 ### Find duplicates
 
