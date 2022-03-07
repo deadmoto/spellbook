@@ -12,8 +12,8 @@ services:
     build: deluge
     network_mode: service:wireguard
     volumes:
-      - /home/pi/.config/deluge/:/root/.config/deluge/
-      - /media/external/deluge/:/root/Downloads/
+      - /home/pi/.config/deluge/:/home/deluge/.config/deluge/
+      - /media/external/deluge/:/home/deluge/Downloads/
     restart: unless-stopped
   plex:
     image: lscr.io/linuxserver/plex:arm32v7-latest
