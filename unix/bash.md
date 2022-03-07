@@ -101,6 +101,10 @@ done
 
 `fdupes -r -S -t foo/ bar/`
 
+### Delete empty directories
+
+`find . -type d -empty -delete`
+
 ### Disk info (usage)
 
 `df -h`
