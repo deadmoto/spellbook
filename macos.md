@@ -1,5 +1,16 @@
 # macOS
 
+## Hotkeys
+
+| Shortcut | Feature           |
+|----------|-------------------|
+| fn + A   | Focus on Dock     |
+| fn + C   | Control Center    |
+| fn + E   | Emoji             |
+| fn + F   | Toggle fullscreen |
+| fn + H   | Show/Hide Desktop |
+| fn + N   | Notifications     |
+
 ## Files
 
 ### Disk devices
@@ -107,6 +118,5 @@ Launch Console app, search for `bluetoothd` (select PROCESS type instead of ANY)
 `lazydocker`
 `mc`
 `ncdu`
-
 
 dd if=/Users/deadmoto/Downloads/spellbook/pi.img of=/dev/disk2
