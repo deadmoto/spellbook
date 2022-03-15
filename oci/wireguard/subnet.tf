@@ -14,14 +14,14 @@ resource "oci_core_subnet" "wireguard_subnet" {
 }
 
 
-resource oci_core_internet_gateway wireguard_internet_gateway {
+resource "oci_core_internet_gateway" "wireguard_internet_gateway" {
   compartment_id = var.compartment_ocid
   display_name   = "wireguard_internet_gateway"
   enabled        = "true"
   vcn_id         = oci_core_vcn.wireguard_vcn.id
 }
 
-resource oci_core_default_route_table wireguard_route_table {
+resource "oci_core_default_route_table" "wireguard_route_table" {
   compartment_id             = var.compartment_ocid
   manage_default_resource_id = oci_core_vcn.wireguard_vcn.default_route_table_id
   route_rules {
@@ -31,7 +31,7 @@ resource oci_core_default_route_table wireguard_route_table {
   }
 }
 
-resource oci_core_default_security_list wireguard_security_list {
+resource "oci_core_default_security_list" "wireguard_security_list" {
   compartment_id             = var.compartment_ocid
   manage_default_resource_id = oci_core_vcn.wireguard_vcn.default_security_list_id
   egress_security_rules {
@@ -109,5 +109,28 @@ resource oci_core_default_security_list wireguard_security_list {
       max = "51820"
       min = "51820"
     }
+  }
+}
+
+data "oci_core_vnic_attachments" "wireguard_eu_vnic_attachments" {
+  compartment_id = var.compartment_ocid
+  instance_id    = oci_core_instance.wireguard_eu_instance.id
+}
+
+data "oci_core_vnic" "wireguard_eu_vnic" {
+  vnic_id = lookup(data.oci_core_vnic_attachments.wireguard_eu_vnic_attachments.vnic_attachments[0], "vnic_id")
+}
+
+data "oci_core_private_ips" "wireguard_eu_private_ips" {
+  vnic_id = data.oci_core_vnic.wireguard_eu_vnic.id
+}
+
+resource "oci_core_public_ip" "wireguard_eu_public_ip" {
+  compartment_id = var.compartment_ocid
+  lifetime       = "RESERVED"
+  display_name   = "wireguard_eu_public_ip"
+  private_ip_id  = data.oci_core_private_ips.wireguard_eu_private_ips.private_ips[0]["id"]
+  lifecycle {
+    prevent_destroy = true
   }
 }
