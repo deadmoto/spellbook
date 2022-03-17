@@ -64,6 +64,10 @@ df = pd.io.gbq.read_gbq(f'''
 
 `df = pd.concat([df_left, df_right], axis=1, keys=['left', 'right'], join='outer')`
 
+### Melt
+
+`df = df.melt(id_vars=['foo'])`
+
 ### Pivot
 
 `df.pivot_table(index=['foo','bar'])`
