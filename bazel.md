@@ -42,3 +42,7 @@ brew pin bazel
 ### Path
 
 `bazel query "allpaths(//:foo, //:bar)"`
+
+## Debug
+
+Add `--@io_bazel_rules_go//go/config:debug` to your command or `build:debug --@io_bazel_rules_go//go/config:debug` to your `bazel.rc`
