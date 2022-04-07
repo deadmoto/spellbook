@@ -3,6 +3,9 @@
 /.run/
 /*.iml
 
+# pyenv
+.python-version
+
 # Terraform
 .terraform/
 .terraform.*
