@@ -38,3 +38,4 @@ services:
     volumes:
       - /var/log:/var/log
       - /media/external/:/media/external/:ro
+    restart: unless-stopped
