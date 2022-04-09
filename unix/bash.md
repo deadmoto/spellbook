@@ -285,9 +285,9 @@ fi
 
 `find . -name "*.iml" -delete`
 
-### Find only files
+### Delete files only
 
-`find . -type f`
+`find . -type f -delete`
 
 ## ls
 
