@@ -34,6 +34,10 @@
 
 `v4l2-ctl --list-devices`
 
+### Device settings
+
+`v4l2-ctl --list-ctrls --device /dev/video0`
+
 ## UV4L
 
 ### Install
