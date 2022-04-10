@@ -28,6 +28,12 @@
 
 `raspivid -t 0 -l -o tcp://0.0.0.0:3333`
 
+## V4L2
+
+### Devices
+
+`v4l2-ctl --list-devices`
+
 ### qv4l2
 
 `qv4l2`
