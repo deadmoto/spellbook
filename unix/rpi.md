@@ -27,3 +27,8 @@
 ### Video
 
 `raspivid -t 0 -l -o tcp://0.0.0.0:3333`
+
+### qv4l2
+
+`qv4l2`
+> NOTE: to load kernel module run `modprobe bcm2835-qv4l2` 
