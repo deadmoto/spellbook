@@ -34,6 +34,16 @@
 
 `v4l2-ctl --list-devices`
 
+## UV4L
+
+### Install
+
+`sudo apt-get install uv4l uv4l-raspicam uv4l-raspicam-extras uv4l-server uv4l-webrtc`
+
+### Create device
+
+`uv4l --driver raspicam`
+
 ### qv4l2
 
 `qv4l2`
