@@ -1,10 +1,14 @@
 # Debian, Ubuntu, Raspbian
 
+## Remove package and files
+
+`apt-get purge foo`
+
 ## dpkg
 
 ### List files in package
 
-`dpkg -L uv4l-raspicam-extras`
+`dpkg -L foo`
 
 ## systemctl
 
