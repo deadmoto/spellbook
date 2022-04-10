@@ -319,6 +319,18 @@ fi
 
 `unzip -o archive.zip`
 
+## pgrep
+
+`pgrep uv4l`
+
+## ps
+
+`ps aux`
+
+## pstree
+
+`pstree -p 42`
+
 ## sort
 
 ### Sort by first column only
