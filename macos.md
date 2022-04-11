@@ -58,8 +58,14 @@
 
 ## Network
 
+### Show Wi-Fi networks
+
+`/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s`
+
+### Do not write .DS_Store on network shares
+
 `defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE`
-> NOTE: run `killall Finder` to apply settings immediately 
+> NOTE: run `killall Finder` to apply settings immediately
 
 ## Bluetooth
 
