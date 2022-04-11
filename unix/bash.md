@@ -141,6 +141,11 @@ done
 
 > NOTE: schema is <local_port>:<target_host>:<target_port> <ssh_host>
 
+### Interface throughput
+
+Server: `iperf -s`
+Client: `iperf -c 192.168.0.1`
+
 ## Arithmetic expansion
 
 ### Evaluate expression
