@@ -39,3 +39,11 @@ services:
       - /var/log:/var/log
       - /media/external/:/media/external/:ro
     restart: unless-stopped
+  uv4l:
+    build: uv4l
+    privileged: true
+    ports:
+      - "0.0.0.0:8080:8080"
+    volumes:
+      - /dev/video0:/dev/video0
+    restart: unless-stopped
