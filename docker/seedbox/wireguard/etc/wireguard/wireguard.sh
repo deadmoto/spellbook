@@ -30,7 +30,8 @@ iptables -A OUTPUT -o eth0 -p udp --dport 1900 -j DROP # Deluge - UPnP
 iptables -A OUTPUT -o eth0 -p udp --dport 6771 -j DROP # Deluge - BitTorrent Local Peer Discovery
 iptables -A OUTPUT -o eth0 -d 224.0.0.0/4 -j DROP      # Deluge - IGMP Multicast
 iptables -A OUTPUT -o lo -j ACCEPT
-iptables -A OUTPUT -p udp -d 152.67.230.10 --dport 51820 -j ACCEPT
+iptables -A OUTPUT -d 8.8.8.8 -j ACCEPT # Google DNS
+iptables -A OUTPUT -d 8.8.4.4 -j ACCEPT # Google DNS
 iptables -A OUTPUT -j NFLOG --nflog-group 0 --nflog-prefix "OUTPUT dropped: "
 
 wg-quick up wg0
