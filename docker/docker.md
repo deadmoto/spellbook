@@ -1,12 +1,18 @@
 # Docker
 
-## Remote
+## Daemon
+
+### Remote
 
 `export DOCKER_HOST=ssh://username@example.com`
 
-## Non-root user
+### Non-root user
 
 `sudo usermod -aG docker $USER`
+
+### Logs
+
+`journalctl -p debug --follow -u docker`
 
 ## Cleanup
 
