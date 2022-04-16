@@ -4,6 +4,20 @@ variable "fingerprint" { default = "b9:48:2d:94:0d:97:6c:e6:7c:76:42:54:77:1b:ff
 variable "private_key_path" { default = ".terraform/oci_private_key.pem" }
 variable "region" { default = "us-sanjose-1" }
 
+terraform {
+  backend "s3" {
+    bucket   = "terraform-states"
+    key      = "wireguard/terraform.tfstate"
+    region   = "us-sanjose-1"
+    endpoint = "https://axvoayxeodoa.compat.objectstorage.us-sanjose-1.oraclecloud.com"
+    shared_credentials_file     = ".terraform/terraform-states_bucket_credentials"
+    skip_region_validation      = true
+    skip_credentials_validation = true
+    skip_metadata_api_check     = true
+    force_path_style            = true
+  }
+}
+
 provider "oci" {
   tenancy_ocid     = var.tenancy_ocid
   user_ocid        = var.user_ocid
