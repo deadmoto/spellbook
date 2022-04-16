@@ -112,24 +112,24 @@ resource "oci_core_default_security_list" "wireguard_security_list" {
   }
 }
 
-data "oci_core_vnic_attachments" "wireguard_eu_vnic_attachments" {
+data "oci_core_vnic_attachments" "wireguard_us_vnic_attachments" {
   compartment_id = var.compartment_ocid
-  instance_id    = oci_core_instance.wireguard_eu_instance.id
+  instance_id    = oci_core_instance.wireguard_us_instance.id
 }
 
-data "oci_core_vnic" "wireguard_eu_vnic" {
-  vnic_id = lookup(data.oci_core_vnic_attachments.wireguard_eu_vnic_attachments.vnic_attachments[0], "vnic_id")
+data "oci_core_vnic" "wireguard_us_vnic" {
+  vnic_id = lookup(data.oci_core_vnic_attachments.wireguard_us_vnic_attachments.vnic_attachments[0], "vnic_id")
 }
 
-data "oci_core_private_ips" "wireguard_eu_private_ips" {
-  vnic_id = data.oci_core_vnic.wireguard_eu_vnic.id
+data "oci_core_private_ips" "wireguard_us_private_ips" {
+  vnic_id = data.oci_core_vnic.wireguard_us_vnic.id
 }
 
-resource "oci_core_public_ip" "wireguard_eu_public_ip" {
+resource "oci_core_public_ip" "wireguard_us_public_ip" {
   compartment_id = var.compartment_ocid
   lifetime       = "RESERVED"
-  display_name   = "wireguard_eu_public_ip"
-  private_ip_id  = data.oci_core_private_ips.wireguard_eu_private_ips.private_ips[0]["id"]
+  display_name   = "wireguard_us_public_ip"
+  private_ip_id  = data.oci_core_private_ips.wireguard_us_private_ips.private_ips[0]["id"]
   lifecycle {
     prevent_destroy = true
   }
