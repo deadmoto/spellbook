@@ -16,7 +16,7 @@ echo Enable Bind DNS server
 echo "
 options {
 	listen-on port 53 { 172.16.0.1; };
-	directory "/var/named";
+	directory \"/var/named\";
   allow-query { any; };
 	recursion yes;
   forwarders {
