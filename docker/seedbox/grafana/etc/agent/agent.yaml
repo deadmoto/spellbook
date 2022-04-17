@@ -1,9 +1,6 @@
 integrations:
   node_exporter:
     enabled: true
-    arp: false
-    entropy: false
-    netstat: false
   prometheus_remote_write:
     - basic_auth:
         password: eyJrIjoiYTU3YTc1MGNhOGFiZTdkOWEzZDc1ZjQ2MTU3NzAxNzY2YzAxYWE1NCIsIm4iOiJkZWFkbW90by1lYXN5c3RhcnQtcHJvbS1wdWJsaXNoZXIiLCJpZCI6NTk5MTExfQ==
