@@ -30,7 +30,7 @@ options {
 " > /etc/named.conf
 systemctl enable named
 systemctl start named
-firewall-offline-cmd --zone=trusted --add-port=53/udp
+firewall-offline-cmd --zone=public --add-port=53/udp
 
 echo Enable IP masquerade
 firewall-offline-cmd --zone=public --add-masquerade
