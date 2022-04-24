@@ -39,6 +39,14 @@ services:
       - /var/log:/var/log
       - /media/external/:/media/external/:ro
     restart: unless-stopped
+  camera:
+    build: camera
+    devices:
+      - /dev/vchiq
+      - /dev/video0
+    ports:
+      - "0.0.0.0:8080:8080"
+    restart: unless-stopped
   uv4l:
     build: uv4l
     privileged: true
