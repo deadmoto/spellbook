@@ -1,5 +1,9 @@
 # Debian, Ubuntu, Raspbian
 
+## Show installed packages
+
+`apt list --installed`
+
 ## Remove package and files
 
 `apt-get purge foo`
