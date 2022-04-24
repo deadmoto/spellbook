@@ -24,11 +24,23 @@
 
 `raspistill -o image.jpg -w 640 -h 480`
 
-### Video
+### Stream to standard output
+
+`raspivid -t 60000 -w 640 -h 480 -fps 30 -b 2000000 -o -`
+
+### Stream to HTTP
 
 `raspivid -t 0 -w 1280 -h 720 -fps 30 -a 12 -l -o tcp://0.0.0.0:3333`
 
 ## V4L2
+
+### All info
+
+`v4l2-ctl --all`
+
+### Driver info
+
+`v4l2-ctl -D` or `v4l2-ctl --info`
 
 ### Devices
 
@@ -46,9 +58,17 @@
 
 ### Create device
 
-`uv4l --driver raspicam`
+`uv4l --driver raspicam` or `uv4l --external-driver --device-name=video0`
 
 ### qv4l2
 
 `qv4l2`
 > NOTE: to load kernel module run `modprobe bcm2835-qv4l2` 
+
+## VLC
+
+> NOTE: add `-vvv` for verbosity
+
+### HTTP stream
+
+`raspivid -t 3600000 -w 640 -h 480 -fps 30 -b 2000000 -o - | cvlc stream:///dev/stdin :demux=h264 --sout '#standard{access=http,mux=ts,dst=:8080}'`
