@@ -70,6 +70,26 @@ PersistentKeepAlive = 15
 PublicKey           = tAmavq1yhh06gK8OOuk54mFHwkKapRVMHZLDHNErkWo=
 AllowedIPs          = 172.16.0.3/32
 PersistentKeepAlive = 15
+
+[Peer]
+PublicKey           = /76JDUA3eavXCB/RBBq/fyCfr2OcxJ2F8bLJedE6AE0=
+AllowedIPs          = 172.16.0.4/32
+PersistentKeepAlive = 15
+
+[Peer]
+PublicKey           = 4BCI3Ccmay2TDpG4zptRRP+gnwhSWnBtPd1y8s95FkQ=
+AllowedIPs          = 172.16.0.5/32
+PersistentKeepAlive = 15
+
+[Peer]
+PublicKey           = sgSrFqKozGbN8MtE5MtOw6lUpHESllmbFQSE8lA41hg=
+AllowedIPs          = 172.16.0.6/32
+PersistentKeepAlive = 15
+
+[Peer]
+PublicKey           = oM+QpKxE86p1VQEoioGOxBhPhUkqg3BdM8vCaoRUXBU=
+AllowedIPs          = 172.16.0.7/32
+PersistentKeepAlive = 15
 " > /etc/wireguard/wg0.conf
 chmod 600 /etc/wireguard/wg0.conf
 systemctl enable wg-quick@wg0
