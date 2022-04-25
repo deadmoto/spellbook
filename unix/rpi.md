@@ -18,15 +18,23 @@
 
 `raspi-gpio get`
 
-## Camera
+## raspistill
 
-### Image
+### Capture image
 
 `raspistill -o image.jpg -w 640 -h 480`
 
+## raspivid
+
+> NOTE: add `--verbose` for more details
+
+### Save timestamped local video
+
+`raspivid --timeout 30000 --annotate 4 --annotate "%Y-%m-%d %X" -o video.h264`
+
 ### Stream to standard output
 
-`raspivid -t 60000 -w 640 -h 480 -fps 30 -b 2000000 -o -`
+`raspivid -w 640 -h 480 -fps 30 -b 2000000 -o -`
 
 ### Stream to HTTP
 
