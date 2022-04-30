@@ -88,6 +88,10 @@ df = pd.io.gbq.read_gbq(f'''
 
 `df.sort_values('foo', ascending=True)`
 
+### Sort by multiple columns
+
+`df.sort_values(by = ['foo', 'bar'], ascending = [True, False], na_position = 'first')`
+
 ### Shuffle data
 
 `df = df.sample(frac=1).reset_index(drop=True)`
