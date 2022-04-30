@@ -121,6 +121,10 @@ done
 
 `blkid` or `blkid /dev/sda1`
 
+### Monitor file contents 
+
+`tail -f foo | xargs -I{} date +"%Y/%m/%d %H:%M:%S: {}"`
+
 ## Network
 
 ### List interfaces
