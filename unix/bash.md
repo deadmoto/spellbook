@@ -87,16 +87,6 @@ done
 
 `lsof /foo/bar`
 
-### Synchronize local directories
-
-`rsync --recursive --inplace --verbose /from/ /to`
-
-> NOTE: without `/` at the end of the source path a directory `from` will be created inside `to` 
-
-### Merge directories
-
-`rsync --recursive --remove-source-files --itemize-changes --stats --verbose /from/ /to`
-
 ### Find duplicates
 
 `fdupes -r -S -t foo/ bar/`
