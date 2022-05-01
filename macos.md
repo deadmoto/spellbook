@@ -27,7 +27,7 @@
 
 ### Disk copy
 
-`dd if=/dev/disk1 of=/foo.bin bs=1m`
+`dd if=/dev/disk1 of=/foo.bin bs=1m status=progress`
 
 ## Power
 
@@ -124,5 +124,3 @@ Launch Console app, search for `bluetoothd` (select PROCESS type instead of ANY)
 `lazydocker`
 `mc`
 `ncdu`
-
-dd if=/Users/deadmoto/Downloads/spellbook/pi.img of=/dev/disk2
