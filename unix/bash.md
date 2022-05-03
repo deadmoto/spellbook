@@ -135,6 +135,10 @@ done
 
 > NOTE: schema is <local_port>:<target_host>:<target_port> <ssh_host>
 
+### Copy remote file
+
+`scp root@192.168.0.1:/foo/bar.log .`
+
 ### Interface throughput
 
 Server: `iperf -s`
