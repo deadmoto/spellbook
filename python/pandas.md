@@ -168,6 +168,8 @@ or
 `df[df.foo.eq('bar')]`
 or
 `df[df.foo.isin(['bar'])`
+or
+`df[df['foo'].isna()]`
 
 ### Filter substring matches
 
@@ -237,6 +239,7 @@ or
 ### Values
 
 `df.loc[:, ['foo', 'bar']]`
+> NOTE: `loc` is the preferred way to update values based on a filter
 
 ### Dictionaries
 
