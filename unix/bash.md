@@ -144,6 +144,17 @@ done
 Server: `iperf -s`
 Client: `iperf -c 192.168.0.1`
 
+## Sound
+
+### List devices
+
+`arecord -l`
+
+### Record sound
+
+`arecord -f cd -d 10 sound.wav`
+>NOTE: add `-vv` to see the signal level in realtime
+
 ## Arithmetic expansion
 
 ### Evaluate expression
