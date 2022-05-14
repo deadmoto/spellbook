@@ -148,7 +148,11 @@ Client: `iperf -c 192.168.0.1`
 
 ### List devices
 
-`arecord -l`
+`amixer scontrols` or `arecord -l`
+
+### Set volume
+
+`amixer sset 'Capture',0 100%`
 
 ### Record sound
 
