@@ -42,6 +42,7 @@ services:
   camera:
     build: camera
     devices:
+      - /dev/snd
       - /dev/vchiq
       - /dev/video0
     ports:
