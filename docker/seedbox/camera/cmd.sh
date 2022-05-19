@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 VIDEO_FIFO=$(mktemp)
+rm -rf $VIDEO_FIFO
 mkfifo $VIDEO_FIFO
 
 echo "Streaming will begin in 60 seconds" & \
