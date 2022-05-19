@@ -2,6 +2,28 @@
 
 ## Figure
 
+### Line
+
+```jupyterpython
+import plotly.express as px
+
+df = df.melt(
+    id_vars=['foo', 'bar'],
+    value_vars=['num', 'pct'],
+)
+px.line(
+    df,
+    x='foo',
+    y='value',
+    color='bar',
+    facet_col='variable',
+    facet_col_wrap=2,
+    width=1080,
+    height=480,
+)
+
+```
+
 ### Contour
 
 ```jupyterpython
