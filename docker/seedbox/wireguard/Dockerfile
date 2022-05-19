@@ -8,6 +8,7 @@ RUN \
 
 ADD etc/ /etc/
 
-RUN chmod +x /etc/wireguard/wireguard.sh
+RUN chmod 400 /etc/wireguard/wg0.conf
+RUN chmod 700 /etc/wireguard/wireguard.sh
 
 CMD /etc/wireguard/wireguard.sh
