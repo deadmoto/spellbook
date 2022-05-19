@@ -38,7 +38,7 @@
 
 ### Stream to HTTP
 
-`raspivid -t 0 -w 1280 -h 720 -fps 30 -a 12 -l -o tcp://0.0.0.0:3333`
+`raspivid -t 0 -w 1280 -h 720 -fps 30 -a 12 -l -ih -o tcp://0.0.0.0:3333`
 
 ## V4L2
 
