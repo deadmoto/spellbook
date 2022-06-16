@@ -20,13 +20,13 @@
 
 ## raspistill
 
+> NOTE: add `--verbose` for more details
+
 ### Capture image
 
 `raspistill -o image.jpg -w 640 -h 480`
 
 ## raspivid
-
-> NOTE: add `--verbose` for more details
 
 ### Save timestamped local video
 
