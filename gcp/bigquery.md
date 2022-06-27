@@ -8,7 +8,7 @@
 
 ### List tables
 
-`bq --project_id foo ls bar`
+`bq --project_id foo ls --max_results=1000 bar`
 
 ### Update tables
 
