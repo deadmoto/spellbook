@@ -291,7 +291,7 @@ fi
 
 ### Cut n-th segment
 
-`cut -d; -f2` or `cut --delimiter=; --fields=2`
+`cut -d; -f2` or `cut -f 2 -w` or `cut --delimiter=; --fields=2`
 
 ## find
 
