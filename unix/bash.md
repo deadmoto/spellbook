@@ -363,6 +363,10 @@ fi
 
 `sort -k1r`
 
+## tail
+
+`tail -n +1` to skip the first line
+
 ## tar
 
 ### Extract to directory
