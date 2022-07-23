@@ -53,6 +53,15 @@ fig = go.Figure(data =
 fig.show()
 ```
 
+### Traces
+
+```jupyterpython
+fig.update_traces(
+    textposition='auto',
+    textinfo='value+percent total+percent previous',
+)
+```
+
 ## Subplots
 
 ```jupyterpython
