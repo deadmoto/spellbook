@@ -28,6 +28,10 @@
 
 `pip config --user set global.extra-index-url http://example.com/`
 
+## Types
+
+`isinstance('foo', str)`
+
 ## Numbers
 
 ### Power
