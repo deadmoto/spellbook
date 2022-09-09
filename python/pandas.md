@@ -220,7 +220,7 @@ or
 
 ### Fill missing values
 
-`df.fillna('foo', inline=True)`
+`df.fillna(value={'foo': 'bar'}, inplace=True)`
 
 ### Apply function
 
