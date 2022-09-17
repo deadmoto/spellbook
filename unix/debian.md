@@ -1,10 +1,16 @@
 # Debian, Ubuntu, Raspbian
 
-## Show installed packages
+## apt
+
+### Installed packages
 
 `apt list --installed`
 
-## Remove package and files
+### Manually installed packages 
+
+`apt-mark showmanual`
+
+### Remove package and files
 
 `apt-get purge foo`
 
