@@ -1,5 +1,10 @@
 version: "3.9"
 services:
+  cron:
+    build: cron
+    pid: "host"
+    volumes:
+      - /var/local/node_exporter:/var/local/node_exporter
   wireguard:
     build: wireguard
     privileged: true
@@ -36,6 +41,7 @@ services:
     build: grafana
     network_mode: host
     volumes:
+      - /var/local/node_exporter:/var/local/node_exporter:ro
       - /var/log:/var/log
       - /media/external/:/media/external/:ro
     restart: unless-stopped
