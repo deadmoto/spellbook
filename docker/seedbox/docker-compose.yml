@@ -56,3 +56,8 @@ services:
     volumes:
       - /dev/video0:/dev/video0
     restart: unless-stopped
+  nginx:
+    build: nginx
+    ports:
+      - "0.0.0.0:8081:80"
+    restart: unless-stopped
