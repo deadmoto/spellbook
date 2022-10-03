@@ -83,7 +83,7 @@ done
 
 `tmp=$(mktemp -d)`
 
-### Open files
+### Files in use
 
 `lsof /foo/bar`
 
