@@ -10,6 +10,10 @@
 
 ## Network
 
+### List DNS servers
+
+`resolvconf -l`
+
 ### Resolve DNS record
 
 `nslookup example.com`
