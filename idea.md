@@ -27,6 +27,7 @@ idea.log.path=~/.config/idea-2020.3/logs
 * Rainbow Brackets
 * Key Promoter X
 * GitLink
+* GitToolBox
 
 > To access preview versions of plugins add plugin repository:
 > https://plugins.jetbrains.com/plugins/list?channel=beta
