@@ -10,6 +10,14 @@
 
 `print(os.__file__)`
 
+### Inspect
+
+```python
+import inspect
+
+inspect.getmembers(inspect)
+```
+
 ## pip
 
 ### Install package
