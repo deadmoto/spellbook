@@ -18,6 +18,10 @@
 
 ## History expansion
 
+### Script location
+
+`echo $(dirname "$0")`
+
 ### Disable history
 
 ` echo Nobody will know`
