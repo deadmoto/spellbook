@@ -41,3 +41,8 @@ idea.log.path=~/.config/idea-2020.3/logs
 <constraint name="MyClass" nameOfExprType="MyClass" />
 </searchConfiguration>
 ```
+
+## Hotkeys
+
+* Instead of Find (Command + F) use file structure (Command + F12)
+* Instead of Find Usages (Option + F7) use Call Hierarchy (Control + Option + H)
