@@ -81,11 +81,26 @@ SELECT *
 FROM `foo.bar.old`;
 ```
 
+### With description
+
+```bigquery
+CREATE TABLE ...
+OPTIONS(description="This could be your ad")
+```
+
 ### With TTL
 
 ```bigquery
 CREATE TABLE ...
 OPTIONS (expiration_timestamp=TIMESTAMP(DATE_ADD(CURRENT_DATE(), INTERVAL 1 DAY)))
+```
+
+### With partition
+
+```bigquery
+CREATE TABLE ...
+PARTITION BY DATE(date_yyyymmdd)
+OPTIONS(require_partition_filter=true)
 ```
 
 ### Function
