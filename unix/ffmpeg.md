@@ -1,8 +1,16 @@
 # ffmpeg
 
+## List V4L2 devices
+
+`ffmpeg -f v4l2 -i list`
+
+## List V4L2 supported formats
+
+`ffmpeg -f v4l2 -list_formats all -i /dev/video0`
+
 ## Limit frame rate
 
-`ffmpeg -y -framerate 4 -i video.h264 -c:v copy -f mpegts video.ts`
+`ffmpeg -framerate 4 -i video.h264 -c:v copy -f mpegts video.ts`
 
 ## Record ALSA audio
 
@@ -10,8 +18,5 @@
 
 ## Package raw video
 
-`ffmpeg -i video.h264 -c:v copy -f mpegts video.ts`
-
-## List V4L2 supported formats
-
-`ffmpeg -f v4l2 -list_formats all -i /dev/video0`
+`ffmpeg -y -i video.h264 -c:v copy -f mpegts video.ts`
+> NOTE: -y overwrites output file if exists
