@@ -54,24 +54,6 @@
 
 `raspivid -t 0 -w 1280 -h 720 -fps 30 -a 12 -l -ih -o tcp://0.0.0.0:3333`
 
-## V4L2
-
-### All info
-
-`v4l2-ctl --all`
-
-### Driver info
-
-`v4l2-ctl -D` or `v4l2-ctl --info`
-
-### Devices
-
-`v4l2-ctl --list-devices`
-
-### Device settings
-
-`v4l2-ctl --list-ctrls --device /dev/video0`
-
 ## UV4L
 
 ### Install
