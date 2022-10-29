@@ -13,3 +13,9 @@
 ## Merge directories
 
 `rsync --verbose --stats --itemize-changes --recursive --remove-source-files /from/ /to`
+
+## lftp
+
+### Sync local files to remote server
+
+`lftp -c "open -u user,pass ftp://example.com/ ; mirror --ignore-time --no-perms -n -e -R ./local ./remote"`
