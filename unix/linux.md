@@ -19,3 +19,13 @@
 `nslookup example.com`
 or
 `dig @127.0.0.1 example.com`
+
+## Modules
+
+### Loaded at boot
+
+`cat /etc/modules`
+
+### Running
+
+`lsmod`
