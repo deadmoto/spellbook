@@ -20,3 +20,7 @@
 
 `ffmpeg -y -i video.h264 -c:v copy -f mpegts video.ts`
 > NOTE: -y overwrites output file if exists
+
+## Pixel formats
+
+`ffmpeg -pix_fmts`
