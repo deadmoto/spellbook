@@ -29,3 +29,13 @@ or
 ### Running
 
 `lsmod`
+
+## Kernel
+
+### Show log
+
+`dmesg`
+
+### Clear log
+
+`dmesg -c`
