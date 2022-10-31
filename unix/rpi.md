@@ -10,23 +10,23 @@
 
 `vcgencmd get_throttled`
 
-### libcamera
-
-#### Test stack`
-
-`libcamera-hello`
-
-#### List cameras
-
-`libcamera-jpeg --list-cameras`
-
-#### Record video
-
-`libcamera-vid -o movie.h264`
-
 ### Camera
 
 `vcgencmd get_camera`
+
+## libcamera
+
+### Test stack`
+
+`libcamera-hello`
+
+### List cameras
+
+`libcamera-jpeg --list-cameras`
+
+### Record video
+
+`libcamera-vid -o movie.h264`
 
 ## GPIO
 
