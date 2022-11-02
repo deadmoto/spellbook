@@ -1,5 +1,7 @@
 # Raspberry Pi
 
+https://www.raspberrypi.com/documentation/accessories/camera.html#v4l2-drivers
+
 ## System Info
 
 ### CPU temperature
@@ -16,17 +18,21 @@
 
 ## libcamera
 
-### Test stack`
+### Test camera
 
-`libcamera-hello`
+`libcamera-hello --list-cameras`
 
 ### List cameras
 
-`libcamera-jpeg --list-cameras`
+`libcamera-vid --list-cameras`
 
 ### Record video
 
 `libcamera-vid -o movie.h264`
+
+### Stream video
+
+`libcamera-vid --timeout 0 --width 640 --height 480 --framerate 3 --codec libav --libav-format mpegts --libav-audio --audio-samplerate 44100 --audio-bitrate 16384 --listen --output "tcp://0.0.0.0:1234?listen=1"`
 
 ## GPIO
 
