@@ -18,13 +18,15 @@ https://www.raspberrypi.com/documentation/accessories/camera.html#v4l2-drivers
 
 ## libcamera
 
+> NOTE: use LIBCAMERA_LOG_LEVELS=*:0 for verbose output
+
 ### Test camera
 
-`libcamera-hello --list-cameras`
+`libcamera-hello -v -n` or `libcamera-hello --verbose --nopreview`
 
 ### List cameras
 
-`libcamera-vid --list-cameras`
+`libcamera-hello --list-cameras`
 
 ### Record video
 
