@@ -8,6 +8,10 @@
 
 `ffmpeg -f v4l2 -list_formats all -i /dev/video0`
 
+## List supported encoders
+
+`ffmpeg -h encoder=h264`
+
 ## Limit frame rate
 
 `ffmpeg -framerate 4 -i video.h264 -c:v copy -f mpegts video.ts`
