@@ -325,19 +325,23 @@ fi
 
 ## zip
 
-#### Delete file from archive
+### Compress current directory
+
+`zip -r archive.zip .`
+
+### Delete file from archive
 
 `zip -d archive.zip file.txt`
 
-#### List zip file contents
+### List zip file contents
 
 `unzip -l archive.zip`
 
-#### Unpack archive silently
+### Unpack archive silently
 
 `unzip -q archive.zip`
 
-#### Unpack archive overwriting existing files
+### Unpack archive overwriting existing files
 
 `unzip -o archive.zip`
 
