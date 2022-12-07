@@ -1,5 +1,7 @@
 # rsync
 
+> WARNING: test settings with `-–dry-run` option
+
 ## Resume transfer
 
 `rsync --verbose --progress --partial root@server:/foo /bar`
@@ -13,6 +15,8 @@
 ## Merge directories
 
 `rsync --verbose --stats --itemize-changes --recursive --remove-source-files /from/ /to`
+
+> Use `--checksum` option to ignore timestamps
 
 ## lftp
 
