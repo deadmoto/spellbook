@@ -1,5 +1,11 @@
 # Git
 
+## Clone
+
+### Quick clone
+
+`git clone --no-tags --single-branch master`
+
 ## Checkout
 
 ### Checkout ignoring local changes
