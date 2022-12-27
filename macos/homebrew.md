@@ -32,7 +32,12 @@
 
 # Useful utilities
 
+`iperf`
 `k9s`
 `lazydocker`
 `mc`
 `ncdu`
+`pyenv`
+`pyenv-virtualenv`
+`tree`
+`wget`
