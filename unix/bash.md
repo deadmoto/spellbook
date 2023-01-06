@@ -16,6 +16,10 @@
 
 `echo foo | tee -a bar.log`
 
+### Set color
+
+`echo -e "\033[0;34mfoo\033[0m"`
+
 ## History expansion
 
 ### Script location
