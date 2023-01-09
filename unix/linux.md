@@ -8,6 +8,12 @@
 
 * `adm` for read access in `/var/log/`
 
+## Devices
+
+### USB
+
+`lsusb`
+
 ## Network
 
 ### List DNS servers
