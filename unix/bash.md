@@ -247,7 +247,7 @@ fi
 
 ### Print array length
 
-`echo $#{foo[@]}`
+`echo ${#foo[@]}`
 
 ## grep
 
