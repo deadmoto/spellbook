@@ -27,6 +27,13 @@ SELECT *
 FROM `foo.bar.INFORMATION_SCHEMA.TABLES`
 WHERE table_name LIKE "%foo%";
 ```
+or
+```bigquery
+SELECT *
+FROM `foo.bar.INFORMATION_SCHEMA.TABLES`
+WHERE table_id LIKE "%foo%"
+ORDER BY creation_time DESC
+```
 
 ## SELECT
 
