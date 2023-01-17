@@ -31,7 +31,7 @@ or
 ```bigquery
 SELECT *
 FROM `foo.bar.INFORMATION_SCHEMA.TABLES`
-WHERE table_id LIKE "%foo%"
+WHERE table_name LIKE "%foo%"
 ORDER BY creation_time DESC
 ```
 
