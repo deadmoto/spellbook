@@ -6,8 +6,3 @@
 
 # pyenv
 .python-version
-
-# Terraform
-.terraform/
-.terraform.*
-terraform.*
