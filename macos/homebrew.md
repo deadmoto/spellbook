@@ -18,6 +18,10 @@
 
 `brew pin protobuf`
 
+## Link binaries
+
+`brew link --overwrite --force --verbose python@3.7`
+
 ## Uninstall
 
 `brew uninstall protobuf`
