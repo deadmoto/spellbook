@@ -20,6 +20,14 @@
 
 `adb shell pm clear com.example.app`
 
+### Disable application
+
+`adb shell pm disable-user --user 0 com.oculus.updater`
+
+### Enable application
+
+`adb shell pm enable com.oculus.updater`
+
 ### Uninstall protected package
 
 `adb shell pm uninstall -k --user 0 com.example.app`
