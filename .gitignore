@@ -4,5 +4,8 @@
 /.run/
 /*.iml
 
+# Obsidian.md
+/.obsidian/
+
 # pyenv
 .python-version
