@@ -59,6 +59,15 @@ STRING="foo:bar"
 echo "${STRING%:bar}"
 ```
 
+### Multi-line
+
+```
+cat > FOO.bar <<- EOF
+line 1
+line 2
+EOF
+```
+
 ## Loops
 
 ### For loop with range
