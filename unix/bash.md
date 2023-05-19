@@ -10,7 +10,7 @@
 
 ### Redirect `stderr` to `stdout`
 
-`ls 2>&1`
+`foo > bar.log 2>&1`
 
 ### Print to stdout and file
 
