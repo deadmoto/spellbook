@@ -185,6 +185,10 @@ with open('some.csv', 'wb') as f:
 or
 `python3 -m http.server 8080`
 
+## JSON formatter
+
+`echo '{"foo": "bar"}' | python -m json.tool`
+
 ## rich
 
 ### inspect

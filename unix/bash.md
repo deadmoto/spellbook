@@ -425,18 +425,3 @@ curl -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage \
   -H 'Content-Type: application/json' \
   -d '{"chat_id": "123456789", "text": "This is a alert from bash", "disable_notification": true}'
 ```
-
-### TP-Link Cloud API token
-```shell
-curl -X POST https://wap.tplinkcloud.com \
-  -H 'Content-Type: application/json' \
-  -d "{
-        'method': 'login',
-        'params': {
-            'appType': 'Kasa_Android',
-            'cloudUserName': '$TPLINK_CLOUD_USERNAME',
-            'cloudPassword': '$TPLINK_CLOUD_PASSWORD',
-            'terminalUUID': '$TPLINK_CLOUD_UUID'
-        }
-      }"
-```
