@@ -23,7 +23,22 @@ px.line(
 )
 
 ```
-
+or
+```jupyterpython
+df = df.groupby(by=['foo']).sum().reset_index()
+fig = px.line(
+  data_frame=df,
+  x='foo',
+  y='bar',
+  color='bar_type',
+  text='bar',
+  hover_data=['num_foo'],
+  facet_row='foo_type',
+  orientation='v',
+  width=1080,
+  height=360,
+)
+```
 ### Contour
 
 ```jupyterpython
