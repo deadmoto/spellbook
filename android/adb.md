@@ -32,6 +32,10 @@
 
 `adb shell pm uninstall -k --user 0 com.example.app`
 
+### Grant system settings permission 
+
+`adb shell pm grant net.dinglisch.android.taskerm android.permission.WRITE_SECURE_SETTINGS`
+
 ## Activity Manager
 
 ### Start service
