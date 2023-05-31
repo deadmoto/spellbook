@@ -63,6 +63,10 @@ git diff HEAD --output=diff.patch
 
 `git config --global fetch.prune true`
 
+### Cache authenticated credentials
+
+`git config --global credential.helper store`
+
 ### Use SSH instead of HTTPS
 
 ```bash
