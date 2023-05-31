@@ -27,3 +27,6 @@ slmgr.vbs -ato
 `winsat formal`
 or
 `Get-CimInstance Win32_WinSat`
+
+### Tweaks
+- Disable Web Search
