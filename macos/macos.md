@@ -1,6 +1,8 @@
 # macOS
 
-## Hotkeys
+## Interface
+
+### Hotkeys
 
 | Shortcut | Feature           |
 |----------|-------------------|
@@ -10,6 +12,14 @@
 | fn + F   | Toggle fullscreen |
 | fn + H   | Show/Hide Desktop |
 | fn + N   | Notifications     |
+
+### Recent Apps
+
+```shell
+defaults write com.apple.dock show-recents -bool true;
+defaults write com.apple.dock show-recent-count -int 10;
+killall Dock
+```
 
 ## Files
 
