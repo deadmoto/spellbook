@@ -94,3 +94,7 @@ or
 ### Enter text
 
 `adb shell input keyboard text foo`
+
+## Emulate gamepad
+
+`adb shell input gamepad keyevent 97`
