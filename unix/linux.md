@@ -10,6 +10,12 @@
 
 ## Devices
 
+### HDD
+
+#### Remove
+
+`echo 1 > /sys/block/sda/device/delete`
+
 ### USB
 
 `lsusb`
