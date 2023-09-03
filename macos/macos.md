@@ -17,7 +17,7 @@
 
 ```shell
 defaults write com.apple.dock show-recents -bool true;
-defaults write com.apple.dock show-recent-count -int 10;
+defaults write com.apple.dock show-recent-count -int 5;
 killall Dock
 ```
 
