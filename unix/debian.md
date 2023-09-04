@@ -10,6 +10,10 @@
 
 `apt-mark showmanual`
 
+### Update package
+
+`sudo apt-get --only-upgrade install apt`
+
 ### Remove package and files
 
 `apt-get purge foo`
