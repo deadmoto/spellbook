@@ -1,19 +1,25 @@
 # kubectl
 
 ## Authentication
-`gcloud container clusters get-credentials userprofile-mesh-dev --zone us-central1-c --project context-pii`
+`gcloud container clusters get-credentials foo --zone us-central1-c --project bar`
 
 ## Deployment
 
+### Status
+`kubectl rollout status deployment/foo`
+
+### History
+`kubectl rollout history deployment/foo`
+
 ### Get config
-`kubectl get deploy userprofile-indexer -o yaml`
+`kubectl get deploy foo -o yaml`
 
 ### Apply config
-`kubectl apply -f /tmp/ansible/k8s/userprofile.yml`
+`kubectl apply -f /tmp/ansible/k8s/foo.yml`
 
 `kubectl get pods`
 
-`kubectl describe pod userprofile-indexer-7cbddd9fd8-9xfpb`
+`kubectl describe pod foo`
 
 ### Get nodes
 
