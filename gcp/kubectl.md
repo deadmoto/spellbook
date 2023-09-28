@@ -6,7 +6,7 @@
 ## Deployment
 
 ### Get config
-`kubectl get deploy userprofile-indexer -o yaml --export`
+`kubectl get deploy userprofile-indexer -o yaml`
 
 ### Apply config
 `kubectl apply -f /tmp/ansible/k8s/userprofile.yml`
