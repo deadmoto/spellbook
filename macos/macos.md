@@ -39,6 +39,14 @@ killall Dock
 
 `dd if=/dev/disk1 of=/foo.bin bs=1m status=progress`
 
+### Find file
+
+`mdfind -name foo`
+
+### Find app
+
+`mdfind "kMDItemCFBundleIdentifier == com.googlecode.iterm2"`
+
 ## Power
 
 ### Prevent sleep
