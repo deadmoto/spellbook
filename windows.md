@@ -1,5 +1,11 @@
 # Windows
 
+## Terminal
+
+### Clipboard
+
+`clip < ~/.ssh/id_rsa.pub`
+
 ## Activation
 
 ### Reset activation
