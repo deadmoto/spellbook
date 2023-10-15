@@ -6,6 +6,10 @@
 
 `clip < ~/.ssh/id_rsa.pub`
 
+### Symlink
+
+`mklink target source`
+
 ## Activation
 
 ### Reset activation
@@ -34,5 +38,5 @@ slmgr.vbs -ato
 or
 `Get-CimInstance Win32_WinSat`
 
-### Tweaks
+### Tweaksz
 - Disable Web Search
