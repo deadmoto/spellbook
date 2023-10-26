@@ -112,6 +112,18 @@ git push --set-upstream origin branch
 
 `git branch -r --no-color | grep -v HEAD | sed "s/\(['\"]\)/\\\\\1/g" | xargs -n1 git branch -rD`
 
+## Delete remote refs
+
+`git remote prune origin`
+
+## Repack
+
+`git repack`
+
+## Retire old refs
+
+`git reflog expire --expire=1.month.ago`
+
 ### Gc and prune
 
 ```
