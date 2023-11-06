@@ -12,6 +12,10 @@
 
 `foo > bar.log 2>&1`
 
+### Ignore error
+
+`foo || true`
+
 ### Print to stdout and file
 
 `echo foo | tee -a bar.log`
