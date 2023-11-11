@@ -40,3 +40,9 @@ or
 
 ### Tweaksz
 - Disable Web Search
+
+# Run
+
+## Startup
+
+`shell:startup`
