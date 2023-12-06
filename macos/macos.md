@@ -47,6 +47,10 @@ killall Dock
 
 `mdfind "kMDItemCFBundleIdentifier == com.googlecode.iterm2"`
 
+### Disable quarantine
+
+`xattr -r -d com.apple.quarantine /Applications/Foo.app`
+
 ## Power
 
 ### Prevent sleep
