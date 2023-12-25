@@ -12,13 +12,17 @@
 
 ### HDD
 
-#### Remove
+#### Test speed
+
+`dd if=/foo/bar of=/dev/null bs=512 count=1M`
+
+#### Remove 
 
 `echo 1 > /sys/block/sda/device/delete`
 
 ### USB
 
-`lsusb`
+`lsusb` or `lsusb -t`
 
 ## Network
 
