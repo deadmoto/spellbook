@@ -1,5 +1,20 @@
 # Git
 
+## Auth
+
+### .netrc
+
+```shell
+CREDENTIALS=$(cat <<-EOF
+machine github.com
+login foo
+password bar
+EOF
+)
+echo $CREDENTIALS >> ~/.netrc
+```
+> WARNING: Credentials are stored in plain text
+
 ## Clone
 
 ### Quick clone
