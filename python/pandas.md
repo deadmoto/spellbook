@@ -80,9 +80,13 @@ df = pd.io.gbq.read_gbq(f'''
 
 `df.drop(labels=['foo', 'bar'], axis=1, inplace=True)`
 
-### Replace value
+### Replace one value
 
 `df.foo = df.foo.replace(24, 42)`
+
+### Replace multiple values
+
+`df.foo = df.foo.replace({'foo':'bar', 'bar': 'foo'})`
 
 ### Sort by column
 
