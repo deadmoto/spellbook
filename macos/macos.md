@@ -13,6 +13,10 @@
 | fn + H   | Show/Hide Desktop |
 | fn + N   | Notifications     |
 
+### Diacritical Marks
+
+> macOS 14 Sonoma: Press the character button and select the character with a diacritical mark
+
 ### Recent Apps
 
 ```shell
