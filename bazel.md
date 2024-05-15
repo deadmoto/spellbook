@@ -50,3 +50,7 @@ brew pin bazel
 ## Debug
 
 Add `--@io_bazel_rules_go//go/config:debug` to your command or `build:debug --@io_bazel_rules_go//go/config:debug` to your `bazel.rc`
+
+## Explain rebuild
+
+`bazel build --explain=/tmp/explanation.txt --verbose_explanations`
