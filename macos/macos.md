@@ -59,7 +59,11 @@ killall Dock
 
 ### Prevent sleep
 
-`pmset noidle`
+> `pmset noidle` is deprecated, use caffeinate
+
+`caffeinate`
+> To daemonize add `-d`\
+> To set duration in seconds add `-t <seconds>`
 
 ### Power status
 
