@@ -74,11 +74,11 @@ df = pd.io.gbq.read_gbq(f'''
 
 ### Rename column
 
-`df.rename(columns = {'foo': 'bar'}, inplace=True)`
+`df.rename(columns = {'foo': 'bar'}, axis=1, inplace=True)`
 
 ### Drop column
 
-`df.drop(labels=['foo', 'bar'], axis=1, inplace=True)`
+`df.drop(labels=['foo', 'bar'], axis=1, level=1, inplace=True)`
 
 ### Replace one value
 
@@ -220,11 +220,21 @@ or
 
 `values = df['foo'].value_counts()`
 
+## Flatten
+
+### Flatten array column
+
+`df = pd.concat([df, df.quantiles.apply(pd.Series)], keys=['index', 'index'], axis=1)`
+
 ## Transform
 
 ### Fill missing values
 
 `df.fillna(value={'foo': 'bar'}, inplace=True)`
+
+### Cast to numeric
+
+`df['numeric'] = pd.to_numeric(df['numeric_str'])`
 
 ### Apply function
 
