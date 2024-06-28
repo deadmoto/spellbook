@@ -52,6 +52,10 @@ df = pd.io.gbq.read_gbq(f'''
 
 `df = df.set_index('foo')`
 
+### Flatten Index
+
+`df.columns = df.columns.droplevel()`
+
 ### Join rows
 
 `df = pd.concat([df_hi, df_lo], axis=0).reset_index(drop=True)`
