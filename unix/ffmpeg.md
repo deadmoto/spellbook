@@ -7,6 +7,10 @@
 
 `ffmpeg -y -i input.mp4 -c:a copy -c:v copy -c:s srt -map 0 -map_metadata 0 output.mkv`
 
+### Export frames
+
+`ffmpeg -i input.mp4 -r 10 frame%04d.png`
+
 ## Limit frame rate
 
 `ffmpeg -y -framerate 4 -i video.h264 -c:v copy -f mpegts video.ts`
