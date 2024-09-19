@@ -16,4 +16,4 @@ or
 
 ### Create GIF
 
-`convert -delay 500 -loop 0 "*.png" animated.gif`
+`magick "*.png" -layers optimize -resize 240 -delay 500 -loop 0 animated.gif`
