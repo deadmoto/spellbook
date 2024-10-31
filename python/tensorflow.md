@@ -25,8 +25,27 @@ model.compile(
 )
 ```
 
+### Build
+
+`model.build(input_shape=(None, len(X_train.iloc[0])))`
+
+### Plot model
+
+`tf.keras.utils.plot_model(model, show_shapes=True)`
+
 ## Layers
 
 ### Freeze layer
 
 `layer.training = False`
+
+## Regularizers
+
+```
+from tensorflow.keras.regularizers import L1, L2, L1L2
+
+model = Sequential([
+    Dense(128, activation='relu', kernel_regularizer=L2(0.1)),
+    Dense(1, activation='sigmoid'),
+])
+```
