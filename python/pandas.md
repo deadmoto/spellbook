@@ -246,6 +246,10 @@ or
 or
 `df['foo'] = df['bar'].apply(lambda x: f(x)), axis=1` for complete rows
 
+### One-hot encoding
+
+`df = pd.get_dummies(df, columns=['foo'])`
+
 ## Access data
 
 ### Index
