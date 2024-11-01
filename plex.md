@@ -1,3 +1,0 @@
-# Ignore folder
-
-`echo > .plexignore`
